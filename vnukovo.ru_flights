@@ -1,0 +1,2126 @@
+flight_status: прилетел
+flight: XF448
+datetime_estimated: 18:47 13.03
+airport_of_departure: ХАБАРОВСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ВЛАДИВОСТОК АВИА
+datetime_actual: 18:44 13.03
+datetime_scheduled: 14:55 13.03
+
+flight_status: прилетел
+flight: H59102
+datetime_estimated: 17:41 13.03
+airport_of_departure: АНТАЛЬЯ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: АЙ ФЛАЙ
+datetime_actual: 17:54 13.03
+datetime_scheduled: 16:15 13.03
+
+flight_status: прилетел
+flight: U8512
+datetime_estimated: 19:06 13.03
+airport_of_departure: ЕРЕВАН
+(ЗВАРТНОЦ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: АРМАВИА
+datetime_actual: 19:21 13.03
+datetime_scheduled: 16:20 13.03
+
+flight_status: не вылетел
+flight: UT772
+datetime_estimated: 23:10 13.03
+airport_of_departure: ДОНЕЦК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 16:40 13.03
+
+flight_status: прилетел
+flight: ЮТ4996
+datetime_estimated: 18:03 13.03
+airport_of_departure: СОВЕТСКИЙ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ЮТЭЙР
+datetime_actual: 18:06 13.03
+datetime_scheduled: 17:45 13.03
+
+flight_status: прилетел
+flight: ГЗП996
+datetime_estimated: 18:03 13.03
+airport_of_departure: СОВЕТСКИЙ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ГАЗПРОМАВИА
+datetime_actual: 18:06 13.03
+datetime_scheduled: 17:45 13.03
+
+flight_status: прилетел
+flight: ЮТ576
+datetime_estimated: 18:21 13.03
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 18:20 13.03
+datetime_scheduled: 17:50 13.03
+
+flight_status: прилетел
+flight: ЮТ374
+datetime_estimated: -
+airport_of_departure: МИН.ВОДЫ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 17:58 13.03
+datetime_scheduled: 17:55 13.03
+
+flight_status: прилетел
+flight: ЮТ464
+datetime_estimated: 17:50 13.03
+airport_of_departure: ТЮМЕНЬ
+(РОЩИНО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 17:56 13.03
+datetime_scheduled: 18:00 13.03
+
+flight_status: прилетел
+flight: ЮТ326
+datetime_estimated: 18:15 13.03
+airport_of_departure: КАЗАНЬ
+()
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 18:18 13.03
+datetime_scheduled: 18:00 13.03
+
+flight_status: прилетел
+flight: ЮТ446
+datetime_estimated: 18:16 13.03
+airport_of_departure: КОГАЛЫМ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 18:31 13.03
+datetime_scheduled: 18:00 13.03
+
+flight_status: прилетел
+flight: ЮТ396
+datetime_estimated: 18:18 13.03
+airport_of_departure: ВЛАДИКАВКАЗ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 18:23 13.03
+datetime_scheduled: 18:05 13.03
+
+flight_status: прилетел
+flight: ЮР296
+datetime_estimated: 18:14 13.03
+airport_of_departure: СУРГУТ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: 18:13 13.03
+datetime_scheduled: 18:10 13.03
+
+flight_status: прилетел
+flight: ЮТ456
+datetime_estimated: 18:33 13.03
+airport_of_departure: НОЯБРЬСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 18:38 13.03
+datetime_scheduled: 18:10 13.03
+
+flight_status: прилетел
+flight: UT764
+datetime_estimated: 18:41 13.03
+airport_of_departure: НАХИЧЕВАНЬ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: 18:35 13.03
+datetime_scheduled: 18:15 13.03
+
+flight_status: прилетел
+flight: ЮР382
+datetime_estimated: 17:55 13.03
+airport_of_departure: УСИНСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: 18:07 13.03
+datetime_scheduled: 18:20 13.03
+
+flight_status: прилетел
+flight: UT768
+datetime_estimated: 17:56 13.03
+airport_of_departure: ЛЕНКОРАНЬ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: 18:03 13.03
+datetime_scheduled: 18:30 13.03
+
+flight_status: прилетел
+flight: ЮР384
+datetime_estimated: 17:55 13.03
+airport_of_departure: УХТА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: 18:10 13.03
+datetime_scheduled: 18:35 13.03
+
+flight_status: прилетел
+flight: 4G602
+datetime_estimated: 18:22 13.03
+airport_of_departure: НУКУС
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ГАЗПРОМАВИА
+datetime_actual: 18:25 13.03
+datetime_scheduled: 18:40 13.03
+
+flight_status: прилетел
+flight: ЮТ162
+datetime_estimated: -
+airport_of_departure: НИЖНИЙ НОВГОРОД
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 18:41 13.03
+datetime_scheduled: 18:40 13.03
+
+flight_status: прилетел
+flight: ЮТ360
+datetime_estimated: 18:55 13.03
+airport_of_departure: НИЖНЕВАРТОВСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 19:05 13.03
+datetime_scheduled: 19:05 13.03
+
+flight_status: прилетел
+flight: ЭХ4174
+datetime_estimated: 19:25 13.03
+airport_of_departure: МИН.ВОДЫ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: 19:31 13.03
+datetime_scheduled: 19:10 13.03
+
+flight_status: прилетел
+flight: ЮК174
+datetime_estimated: 19:25 13.03
+airport_of_departure: МИН.ВОДЫ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: 19:31 13.03
+datetime_scheduled: 19:10 13.03
+
+flight_status: прилетел
+flight: SU674
+datetime_estimated: 19:10 13.03
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: АЭРОФЛОТ
+datetime_actual: 19:13 13.03
+datetime_scheduled: 19:15 13.03
+
+flight_status: прилетел
+flight: Д9618
+datetime_estimated: 19:10 13.03
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ДОНАВИА
+datetime_actual: 19:13 13.03
+datetime_scheduled: 19:15 13.03
+
+flight_status: прилетел
+flight: ЯК725
+datetime_estimated: 19:48 13.03
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ЯКУТИЯ
+datetime_actual: 19:59 13.03
+datetime_scheduled: 19:20 13.03
+
+flight_status: прилетел
+flight: ЮТ584
+datetime_estimated: -
+airport_of_departure: НОВОСИБИРСК
+(ТОЛМАЧЕВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 20:14 13.03
+datetime_scheduled: 20:20 13.03
+
+flight_status: прилетел
+flight: ЮТ358
+datetime_estimated: 20:35 13.03
+airport_of_departure: САМАРА
+(КУРУМОЧ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: 20:33 13.03
+datetime_scheduled: 20:30 13.03
+
+flight_status: прилетел
+flight: ЮР376
+datetime_estimated: 20:23 13.03
+airport_of_departure: СЫКТЫВКАР
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: 20:25 13.03
+datetime_scheduled: 20:45 13.03
+
+flight_status: вылетел
+flight: N2355
+datetime_estimated: -
+airport_of_departure: МАХАЧКАЛА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЛИНИИ ДАГЕСТАНА
+datetime_actual: -
+datetime_scheduled: 20:55 13.03
+
+flight_status: прилетел
+flight: ГЗП924
+datetime_estimated: 20:37 13.03
+airport_of_departure: С-ПЕТЕРБУРГ
+(ПУЛКОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ГАЗПРОМАВИА
+datetime_actual: 20:41 13.03
+datetime_scheduled: 21:10 13.03
+
+flight_status: вылетел
+flight: ЮТ582
+datetime_estimated: 21:10 13.03
+airport_of_departure: КРАСНОЯРСК
+(ЕМЕЛЬЯНОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 21:25 13.03
+
+flight_status: вылетел
+flight: ЭХ4254
+datetime_estimated: -
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 21:45 13.03
+
+flight_status: вылетел
+flight: ЮК183
+datetime_estimated: -
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 21:45 13.03
+
+flight_status: вылетел
+flight: ЭХ206
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 21:55 13.03
+
+flight_status: вылетел
+flight: ЮК206
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 21:55 13.03
+
+flight_status: вылетел
+flight: ЭХ304
+datetime_estimated: 22:32 13.03
+airport_of_departure: ЕКАТЕРИНБУРГ
+(КОЛЬЦОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 22:15 13.03
+
+flight_status: вылетел
+flight: AB1990
+datetime_estimated: 22:00 13.03
+airport_of_departure: БРАУНШВЕЙГ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЭЙР БЕРЛИН
+datetime_actual: -
+datetime_scheduled: 22:25 13.03
+
+flight_status: -
+flight: ЭХ106
+datetime_estimated: -
+airport_of_departure: С-ПЕТЕРБУРГ
+(ПУЛКОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 23:00 13.03
+
+flight_status: -
+flight: ЮК9106
+datetime_estimated: -
+airport_of_departure: С-ПЕТЕРБУРГ
+(ПУЛКОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 23:00 13.03
+
+flight_status: -
+flight: ЭХ148
+datetime_estimated: -
+airport_of_departure: КАЛИНИНГРАД
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 23:20 13.03
+
+flight_status: -
+flight: ГЗП982
+datetime_estimated: -
+airport_of_departure: УЛЬЯНОВСК
+(БАРАТАЕВКА)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ГАЗПРОМАВИА
+datetime_actual: -
+datetime_scheduled: 23:30 13.03
+
+flight_status: -
+flight: ЭХ226
+datetime_estimated: -
+airport_of_departure: СОЧИ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 23:50 13.03
+
+flight_status: -
+flight: WZ9650
+datetime_estimated: -
+airport_of_departure: СТАМБУЛ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: РЕД ВИНГС
+datetime_actual: -
+datetime_scheduled: 00:05 14.03
+
+flight_status: -
+flight: XW7702
+datetime_estimated: -
+airport_of_departure: СТАМБУЛ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 00:30 14.03
+
+flight_status: -
+flight: R39960
+datetime_estimated: -
+airport_of_departure: НИЦЦА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЯКУТИЯ
+datetime_actual: -
+datetime_scheduled: 00:35 14.03
+
+flight_status: -
+flight: ЭХ406
+datetime_estimated: -
+airport_of_departure: ЧЕЛЯБИНСК
+(БАЛАНДИНО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 07:00 14.03
+
+flight_status: -
+flight: ЭХ194
+datetime_estimated: -
+airport_of_departure: УФА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 07:00 14.03
+
+flight_status: -
+flight: ЭХ122
+datetime_estimated: -
+airport_of_departure: МУРМАНСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 07:10 14.03
+
+flight_status: -
+flight: ЭХ202
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 07:40 14.03
+
+flight_status: отменен
+flight: ЮК202
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 07:40 14.03
+
+flight_status: -
+flight: СЬР9202
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 07:40 14.03
+
+flight_status: -
+flight: ЮТ454
+datetime_estimated: -
+airport_of_departure: ТЮМЕНЬ
+(РОЩИНО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 07:55 14.03
+
+flight_status: -
+flight: ЮТ566
+datetime_estimated: -
+airport_of_departure: ПЕРМЬ
+(БОЛЬШОЕ САВИНО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:00 14.03
+
+flight_status: -
+flight: ЮР350
+datetime_estimated: -
+airport_of_departure: СТАВРОПОЛЬ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 08:05 14.03
+
+flight_status: -
+flight: ЭХ306
+datetime_estimated: -
+airport_of_departure: ЕКАТЕРИНБУРГ
+(КОЛЬЦОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 08:05 14.03
+
+flight_status: -
+flight: ЮТ346
+datetime_estimated: -
+airport_of_departure: ОМСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:10 14.03
+
+flight_status: -
+flight: ЮТ362
+datetime_estimated: -
+airport_of_departure: МАГНИТОГОРСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:15 14.03
+
+flight_status: -
+flight: ЮТ468
+datetime_estimated: -
+airport_of_departure: БАРНАУЛ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:15 14.03
+
+flight_status: -
+flight: ЮТ342
+datetime_estimated: -
+airport_of_departure: НИЖНЕВАРТОВСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:20 14.03
+
+flight_status: -
+flight: ЮТ364
+datetime_estimated: -
+airport_of_departure: УФА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:20 14.03
+
+flight_status: -
+flight: ЮР9122
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 08:25 14.03
+
+flight_status: -
+flight: ЮТ572
+datetime_estimated: -
+airport_of_departure: КРАСНОЯРСК
+(ЕМЕЛЬЯНОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:30 14.03
+
+flight_status: -
+flight: S74477
+datetime_estimated: -
+airport_of_departure: ЯКУТСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: СИБИРЬ
+datetime_actual: -
+datetime_scheduled: 08:30 14.03
+
+flight_status: -
+flight: ЮТ188
+datetime_estimated: -
+airport_of_departure: НИЖНЕКАМСК
+(БЕГИШЕВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:30 14.03
+
+flight_status: -
+flight: ЯК477
+datetime_estimated: -
+airport_of_departure: ЯКУТСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ЯКУТИЯ
+datetime_actual: -
+datetime_scheduled: 08:30 14.03
+
+flight_status: -
+flight: ЮТ466
+datetime_estimated: -
+airport_of_departure: ИРКУТСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:35 14.03
+
+flight_status: -
+flight: ЮТ490
+datetime_estimated: -
+airport_of_departure: С-ПЕТЕРБУРГ
+(ПУЛКОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:35 14.03
+
+flight_status: -
+flight: ЮТ570
+datetime_estimated: -
+airport_of_departure: НОВОСИБИРСК
+(ТОЛМАЧЕВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:40 14.03
+
+flight_status: -
+flight: ЮТ248
+datetime_estimated: -
+airport_of_departure: СУРГУТ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:40 14.03
+
+flight_status: -
+flight: UT714
+datetime_estimated: -
+airport_of_departure: РИГА
+(СКУЛЬТЕ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:40 14.03
+
+flight_status: -
+flight: ЮТ438
+datetime_estimated: -
+airport_of_departure: САМАРА
+(КУРУМОЧ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:40 14.03
+
+flight_status: -
+flight: UT712
+datetime_estimated: -
+airport_of_departure: ЗАПОРОЖЬЕ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:45 14.03
+
+flight_status: -
+flight: QU107
+datetime_estimated: -
+airport_of_departure: ЗАПОРОЖЬЕ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: UTAIR - UKRAINE
+datetime_actual: -
+datetime_scheduled: 08:45 14.03
+
+flight_status: -
+flight: ЮТ184
+datetime_estimated: -
+airport_of_departure: УЛЬЯНОВСК
+(БАРАТАЕВКА)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:50 14.03
+
+flight_status: -
+flight: ЮТ440
+datetime_estimated: -
+airport_of_departure: ТОМСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:50 14.03
+
+flight_status: -
+flight: ЮТ580
+datetime_estimated: -
+airport_of_departure: СОЧИ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:50 14.03
+
+flight_status: -
+flight: ЮР380
+datetime_estimated: -
+airport_of_departure: СЫКТЫВКАР
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 08:55 14.03
+
+flight_status: -
+flight: ЮТ578
+datetime_estimated: -
+airport_of_departure: МУРМАНСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:55 14.03
+
+flight_status: -
+flight: ЮТ352
+datetime_estimated: -
+airport_of_departure: ХАНТЫ-МАНСИЙСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 08:55 14.03
+
+flight_status: -
+flight: QU105
+datetime_estimated: -
+airport_of_departure: ХАРЬКОВ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: UTAIR - UKRAINE
+datetime_actual: -
+datetime_scheduled: 09:00 14.03
+
+flight_status: -
+flight: ЮТ192
+datetime_estimated: -
+airport_of_departure: БЕЛГОРОД
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 09:00 14.03
+
+flight_status: -
+flight: UT704
+datetime_estimated: -
+airport_of_departure: ВИЛЬНЮС
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 09:00 14.03
+
+flight_status: -
+flight: UT774
+datetime_estimated: -
+airport_of_departure: ХАРЬКОВ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 09:00 14.03
+
+flight_status: -
+flight: Д215
+datetime_estimated: -
+airport_of_departure: ЧЕРЕПОВЕЦ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: СЕВЕРСТАЛЬ
+datetime_actual: -
+datetime_scheduled: 09:05 14.03
+
+flight_status: -
+flight: ЮК135
+datetime_estimated: -
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 09:10 14.03
+
+flight_status: -
+flight: ЮТ160
+datetime_estimated: -
+airport_of_departure: НИЖНИЙ НОВГОРОД
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 09:10 14.03
+
+flight_status: -
+flight: UT804
+datetime_estimated: -
+airport_of_departure: ДУШАНБЕ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 09:15 14.03
+
+flight_status: -
+flight: ЮТ344
+datetime_estimated: -
+airport_of_departure: КАЗАНЬ
+()
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 09:15 14.03
+
+flight_status: -
+flight: S74748
+datetime_estimated: -
+airport_of_departure: БРАТСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: СИБИРЬ
+datetime_actual: -
+datetime_scheduled: 09:25 14.03
+
+flight_status: -
+flight: ЯК748
+datetime_estimated: -
+airport_of_departure: БРАТСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ЯКУТИЯ
+datetime_actual: -
+datetime_scheduled: 09:25 14.03
+
+flight_status: -
+flight: ЮР126
+datetime_estimated: -
+airport_of_departure: КИРОВ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 09:25 14.03
+
+flight_status: отменен
+flight: ЮР9288
+datetime_estimated: -
+airport_of_departure: АРХАНГЕЛЬСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 09:30 14.03
+
+flight_status: -
+flight: ЮТ388
+datetime_estimated: -
+airport_of_departure: АРХАНГЕЛЬСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 09:30 14.03
+
+flight_status: -
+flight: ЛК272
+datetime_estimated: -
+airport_of_departure: НОРИЛЬСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: КОНТИНЕНТ
+datetime_actual: -
+datetime_scheduled: 09:30 14.03
+
+flight_status: -
+flight: ГЗП964
+datetime_estimated: -
+airport_of_departure: УХТА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ГАЗПРОМАВИА
+datetime_actual: -
+datetime_scheduled: 09:35 14.03
+
+flight_status: -
+flight: Д9610
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ДОНАВИА
+datetime_actual: -
+datetime_scheduled: 09:35 14.03
+
+flight_status: -
+flight: ЮТ4964
+datetime_estimated: -
+airport_of_departure: УХТА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 09:35 14.03
+
+flight_status: -
+flight: ЮК137
+datetime_estimated: -
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 09:50 14.03
+
+flight_status: -
+flight: МИ1228
+datetime_estimated: -
+airport_of_departure: СТАВРОПОЛЬ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: КАВМИНВОДЫАВИА
+datetime_actual: -
+datetime_scheduled: 09:50 14.03
+
+flight_status: -
+flight: XF322
+datetime_estimated: -
+airport_of_departure: КЕМЕРОВО
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ВЛАДИВОСТОК АВИА
+datetime_actual: -
+datetime_scheduled: 10:00 14.03
+
+flight_status: -
+flight: ЭХ364
+datetime_estimated: -
+airport_of_departure: ТЮМЕНЬ
+(РОЩИНО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 10:10 14.03
+
+flight_status: -
+flight: МИ1218
+datetime_estimated: -
+airport_of_departure: МИН.ВОДЫ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: КАВМИНВОДЫАВИА
+datetime_actual: -
+datetime_scheduled: 10:50 14.03
+
+flight_status: -
+flight: ЮК185
+datetime_estimated: -
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 11:05 14.03
+
+flight_status: -
+flight: XF446
+datetime_estimated: -
+airport_of_departure: БЛАГОВЕЩЕНСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ВЛАДИВОСТОК АВИА
+datetime_actual: -
+datetime_scheduled: 11:05 14.03
+
+flight_status: -
+flight: 6В5819
+datetime_estimated: -
+airport_of_departure: НАЛЬЧИК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: САРАТОВСКИЕ АВИАЛИНИИ
+datetime_actual: -
+datetime_scheduled: 11:25 14.03
+
+flight_status: -
+flight: 6В5817
+datetime_estimated: -
+airport_of_departure: НАЛЬЧИК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: САРАТОВСКИЕ АВИАЛИНИИ
+datetime_actual: -
+datetime_scheduled: 11:25 14.03
+
+flight_status: -
+flight: ЭХ104
+datetime_estimated: -
+airport_of_departure: С-ПЕТЕРБУРГ
+(ПУЛКОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 11:45 14.03
+
+flight_status: -
+flight: 6В770
+datetime_estimated: -
+airport_of_departure: САРАТОВ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: САРАТОВСКИЕ АВИАЛИНИИ
+datetime_actual: -
+datetime_scheduled: 12:00 14.03
+
+flight_status: -
+flight: ЯК798
+datetime_estimated: -
+airport_of_departure: БЛАГОВЕЩЕНСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ЯКУТИЯ
+datetime_actual: -
+datetime_scheduled: 12:05 14.03
+
+flight_status: -
+flight: XF2798
+datetime_estimated: -
+airport_of_departure: БЛАГОВЕЩЕНСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ВЛАДИВОСТОК АВИА
+datetime_actual: -
+datetime_scheduled: 12:05 14.03
+
+flight_status: -
+flight: N2371
+datetime_estimated: -
+airport_of_departure: МАХАЧКАЛА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЛИНИИ ДАГЕСТАНА
+datetime_actual: -
+datetime_scheduled: 12:30 14.03
+
+flight_status: -
+flight: ГГ722
+datetime_estimated: -
+airport_of_departure: ГРОЗНЫЙ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ГРОЗНЫЙ АВИА
+datetime_actual: -
+datetime_scheduled: 13:10 14.03
+
+flight_status: -
+flight: SU2047
+datetime_estimated: -
+airport_of_departure: КИЕВ
+(БОРИСПОЛЬ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: АЭРОФЛОТ
+datetime_actual: -
+datetime_scheduled: 13:30 14.03
+
+flight_status: -
+flight: VV403
+datetime_estimated: -
+airport_of_departure: КИЕВ
+(БОРИСПОЛЬ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: АЭРОСВИТ
+datetime_actual: -
+datetime_scheduled: 13:30 14.03
+
+flight_status: -
+flight: В21974
+datetime_estimated: -
+airport_of_departure: МИНСК
+(ИНТЕРНЭЙШНЛ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: БЕЛАВИА
+datetime_actual: -
+datetime_scheduled: 14:20 14.03
+
+flight_status: -
+flight: ЭХ222
+datetime_estimated: -
+airport_of_departure: СОЧИ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 14:30 14.03
+
+flight_status: -
+flight: XF459
+datetime_estimated: -
+airport_of_departure: ВЛАДИВОСТОК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ВЛАДИВОСТОК АВИА
+datetime_actual: -
+datetime_scheduled: 14:30 14.03
+
+flight_status: -
+flight: XF448
+datetime_estimated: -
+airport_of_departure: ХАБАРОВСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ВЛАДИВОСТОК АВИА
+datetime_actual: -
+datetime_scheduled: 14:55 14.03
+
+flight_status: -
+flight: ЮТ486
+datetime_estimated: -
+airport_of_departure: САМАРА
+(КУРУМОЧ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 15:05 14.03
+
+flight_status: -
+flight: ЮК4178
+datetime_estimated: -
+airport_of_departure: ВЛАДИКАВКАЗ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 15:30 14.03
+
+flight_status: -
+flight: ЮК178
+datetime_estimated: -
+airport_of_departure: ВЛАДИКАВКАЗ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 15:30 14.03
+
+flight_status: -
+flight: 4U8156
+datetime_estimated: -
+airport_of_departure: БЕРЛИН
+(ШЕНЕФЕЛЬД)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ДЖЕРМАНВИНГЗ
+datetime_actual: -
+datetime_scheduled: 15:30 14.03
+
+flight_status: -
+flight: ЮК133
+datetime_estimated: -
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 15:30 14.03
+
+flight_status: -
+flight: ЭХ4252
+datetime_estimated: -
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 15:30 14.03
+
+flight_status: -
+flight: ЭХ178
+datetime_estimated: -
+airport_of_departure: ВЛАДИКАВКАЗ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 15:30 14.03
+
+flight_status: -
+flight: 4U994
+datetime_estimated: -
+airport_of_departure: КЕЛЬН
+(БОНН)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ДЖЕРМАНВИНГЗ
+datetime_actual: -
+datetime_scheduled: 15:40 14.03
+
+flight_status: -
+flight: 4U2140
+datetime_estimated: -
+airport_of_departure: ШТУТГАРТ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ДЖЕРМАНВИНГЗ
+datetime_actual: -
+datetime_scheduled: 15:40 14.03
+
+flight_status: -
+flight: 4U3102
+datetime_estimated: -
+airport_of_departure: ГАННОВЕР
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ДЖЕРМАНВИНГЗ
+datetime_actual: -
+datetime_scheduled: 15:45 14.03
+
+flight_status: -
+flight: ЮТ198
+datetime_estimated: -
+airport_of_departure: ВОРОНЕЖ
+(ЧЕРТОВИЦКОЕ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 16:05 14.03
+
+flight_status: -
+flight: КСМ9610
+datetime_estimated: -
+airport_of_departure: НАЗРАНЬ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: КОСМОС
+datetime_actual: -
+datetime_scheduled: 16:10 14.03
+
+flight_status: -
+flight: ЮТ368
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 16:20 14.03
+
+flight_status: -
+flight: U8512
+datetime_estimated: -
+airport_of_departure: ЕРЕВАН
+(ЗВАРТНОЦ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: АРМАВИА
+datetime_actual: -
+datetime_scheduled: 16:20 14.03
+
+flight_status: -
+flight: ЮР398
+datetime_estimated: -
+airport_of_departure: ГЕЛЕНДЖИК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 16:25 14.03
+
+flight_status: -
+flight: ЯК9932
+datetime_estimated: -
+airport_of_departure: АНАДЫРЬ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ЯКУТИЯ
+datetime_actual: -
+datetime_scheduled: 16:30 14.03
+
+flight_status: -
+flight: ЮТ378
+datetime_estimated: -
+airport_of_departure: АСТРАХАНЬ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 16:30 14.03
+
+flight_status: -
+flight: ЭХ146
+datetime_estimated: -
+airport_of_departure: КАЛИНИНГРАД
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 16:35 14.03
+
+flight_status: -
+flight: UT772
+datetime_estimated: -
+airport_of_departure: ДОНЕЦК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 16:40 14.03
+
+flight_status: -
+flight: ЮТ386
+datetime_estimated: -
+airport_of_departure: ВОЛГОГРАД
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 16:45 14.03
+
+flight_status: -
+flight: ЮТ448
+datetime_estimated: -
+airport_of_departure: АРХАНГЕЛЬСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 16:50 14.03
+
+flight_status: -
+flight: МИ1220
+datetime_estimated: -
+airport_of_departure: МИН.ВОДЫ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: КАВМИНВОДЫАВИА
+datetime_actual: -
+datetime_scheduled: 16:50 14.03
+
+flight_status: -
+flight: UT710
+datetime_estimated: -
+airport_of_departure: ЛУГАНСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:00 14.03
+
+flight_status: -
+flight: ЮТ354
+datetime_estimated: -
+airport_of_departure: ХАНТЫ-МАНСИЙСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:00 14.03
+
+flight_status: -
+flight: QU101
+datetime_estimated: -
+airport_of_departure: ЛУГАНСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: UTAIR - UKRAINE
+datetime_actual: -
+datetime_scheduled: 17:00 14.03
+
+flight_status: -
+flight: ЮТ166
+datetime_estimated: -
+airport_of_departure: ТАГАНРОГ
+(ЮЖНЫЙ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:10 14.03
+
+flight_status: -
+flight: ЮТ568
+datetime_estimated: -
+airport_of_departure: ПЕРМЬ
+(БОЛЬШОЕ САВИНО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:15 14.03
+
+flight_status: -
+flight: ЭХ230
+datetime_estimated: -
+airport_of_departure: СОЧИ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 17:20 14.03
+
+flight_status: -
+flight: ЮТ370
+datetime_estimated: -
+airport_of_departure: С-ПЕТЕРБУРГ
+(ПУЛКОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:35 14.03
+
+flight_status: -
+flight: ЮТ250
+datetime_estimated: -
+airport_of_departure: СОЧИ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:40 14.03
+
+flight_status: -
+flight: UT794
+datetime_estimated: -
+airport_of_departure: ЛЬВОВ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:45 14.03
+
+flight_status: -
+flight: ЮТ576
+datetime_estimated: -
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:50 14.03
+
+flight_status: -
+flight: ЮТ390
+datetime_estimated: -
+airport_of_departure: КАЛИНИНГРАД
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:50 14.03
+
+flight_status: -
+flight: ЮТ366
+datetime_estimated: -
+airport_of_departure: УФА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:50 14.03
+
+flight_status: -
+flight: UT708
+datetime_estimated: -
+airport_of_departure: ВИЛЬНЮС
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: В
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:55 14.03
+
+flight_status: -
+flight: ЮТ374
+datetime_estimated: -
+airport_of_departure: МИН.ВОДЫ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 17:55 14.03
+
+flight_status: -
+flight: ЮТ446
+datetime_estimated: -
+airport_of_departure: КОГАЛЫМ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 18:00 14.03
+
+flight_status: -
+flight: ЮТ326
+datetime_estimated: -
+airport_of_departure: КАЗАНЬ
+()
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 18:00 14.03
+
+flight_status: -
+flight: ЮТ464
+datetime_estimated: -
+airport_of_departure: ТЮМЕНЬ
+(РОЩИНО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 18:00 14.03
+
+flight_status: -
+flight: ЮТ396
+datetime_estimated: -
+airport_of_departure: ВЛАДИКАВКАЗ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 18:05 14.03
+
+flight_status: -
+flight: ЮР296
+datetime_estimated: -
+airport_of_departure: СУРГУТ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 18:10 14.03
+
+flight_status: -
+flight: ЮТ456
+datetime_estimated: -
+airport_of_departure: НОЯБРЬСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 18:10 14.03
+
+flight_status: -
+flight: ЮР382
+datetime_estimated: -
+airport_of_departure: УСИНСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 18:20 14.03
+
+flight_status: -
+flight: ЮР384
+datetime_estimated: -
+airport_of_departure: УХТА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 18:35 14.03
+
+flight_status: -
+flight: ЮТ162
+datetime_estimated: -
+airport_of_departure: НИЖНИЙ НОВГОРОД
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 18:40 14.03
+
+flight_status: -
+flight: ГЗП946
+datetime_estimated: -
+airport_of_departure: НОВЫЙ УРЕНГОЙ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ГАЗПРОМАВИА
+datetime_actual: -
+datetime_scheduled: 18:50 14.03
+
+flight_status: -
+flight: ЭХ402
+datetime_estimated: -
+airport_of_departure: ЧЕЛЯБИНСК
+(БАЛАНДИНО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 18:55 14.03
+
+flight_status: -
+flight: ЮК9402
+datetime_estimated: -
+airport_of_departure: ЧЕЛЯБИНСК
+(БАЛАНДИНО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 18:55 14.03
+
+flight_status: -
+flight: ЮТ360
+datetime_estimated: -
+airport_of_departure: НИЖНЕВАРТОВСК
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 19:05 14.03
+
+flight_status: -
+flight: ЮК174
+datetime_estimated: -
+airport_of_departure: МИН.ВОДЫ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 19:10 14.03
+
+flight_status: -
+flight: ЭХ4174
+datetime_estimated: -
+airport_of_departure: МИН.ВОДЫ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 19:10 14.03
+
+flight_status: -
+flight: SU674
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: АЭРОФЛОТ
+datetime_actual: -
+datetime_scheduled: 19:15 14.03
+
+flight_status: -
+flight: Д9618
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ДОНАВИА
+datetime_actual: -
+datetime_scheduled: 19:15 14.03
+
+flight_status: -
+flight: Д217
+datetime_estimated: -
+airport_of_departure: ЧЕРЕПОВЕЦ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: СЕВЕРСТАЛЬ
+datetime_actual: -
+datetime_scheduled: 20:05 14.03
+
+flight_status: -
+flight: ЮТ584
+datetime_estimated: -
+airport_of_departure: НОВОСИБИРСК
+(ТОЛМАЧЕВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 20:20 14.03
+
+flight_status: -
+flight: ЮТ358
+datetime_estimated: -
+airport_of_departure: САМАРА
+(КУРУМОЧ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 20:30 14.03
+
+flight_status: -
+flight: ЮР376
+datetime_estimated: -
+airport_of_departure: СЫКТЫВКАР
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР-ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 20:45 14.03
+
+flight_status: -
+flight: N2355
+datetime_estimated: -
+airport_of_departure: МАХАЧКАЛА
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЛИНИИ ДАГЕСТАНА
+datetime_actual: -
+datetime_scheduled: 20:55 14.03
+
+flight_status: -
+flight: ЮТ582
+datetime_estimated: -
+airport_of_departure: КРАСНОЯРСК
+(ЕМЕЛЬЯНОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: ЮТЭЙР
+datetime_actual: -
+datetime_scheduled: 21:25 14.03
+
+flight_status: -
+flight: ЭХ4254
+datetime_estimated: -
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 21:45 14.03
+
+flight_status: -
+flight: ЮК183
+datetime_estimated: -
+airport_of_departure: КРАСНОДАР
+(ПАШКОВСКАЯ)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 21:45 14.03
+
+flight_status: -
+flight: СЬР9206
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 21:55 14.03
+
+flight_status: отменен
+flight: ЭХ206
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 21:55 14.03
+
+flight_status: отменен
+flight: ЮК206
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: АВИАЦИОННЫЕ ЛИНИИ КУБАНИ
+datetime_actual: -
+datetime_scheduled: 21:55 14.03
+
+flight_status: -
+flight: ЭХ206
+datetime_estimated: -
+airport_of_departure: РОСТОВ-НА-ДОНУ
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 21:55 14.03
+
+flight_status: -
+flight: ГЗП982
+datetime_estimated: -
+airport_of_departure: УЛЬЯНОВСК
+(БАРАТАЕВКА)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: А
+airline: ГАЗПРОМАВИА
+datetime_actual: -
+datetime_scheduled: 22:05 14.03
+
+flight_status: -
+flight: ЭХ304
+datetime_estimated: -
+airport_of_departure: ЕКАТЕРИНБУРГ
+(КОЛЬЦОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 22:15 14.03
+
+flight_status: -
+flight: ЭХ148
+datetime_estimated: -
+airport_of_departure: КАЛИНИНГРАД
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 23:20 14.03
+
+flight_status: -
+flight: ЭХ106
+datetime_estimated: -
+airport_of_departure: С-ПЕТЕРБУРГ
+(ПУЛКОВО)
+comments: 
+airport_of_arrival: ВНУКОВО
+terminal: Д
+airline: СКАЙ ЭКСПРЕСС
+datetime_actual: -
+datetime_scheduled: 23:20 14.03
+
