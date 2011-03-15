@@ -7,7 +7,10 @@ from timetable.itemloaders import TimetableLoader
 class VnukovoSpider(BaseSpider):
     name = "vnukovo.ru"
     allowed_domains = ["vnukovo.ru"]
-    start_urls = ["http://vnukovo.ru/rus/for-passengers/board/index.wbp"]
+    start_urls = [
+        "http://vnukovo.ru/rus/for-passengers/board/index.wbp?time-table.direction=1",
+        "http://vnukovo.ru/rus/for-passengers/board/index.wbp?time-table.direction=0"
+    ]
 
     def parse(self, response):
         hxs = HtmlXPathSelector(response)

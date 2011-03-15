@@ -12,6 +12,8 @@ BOT_VERSION = '1.0'
 SPIDER_MODULES = ['timetable.spiders']
 NEWSPIDER_MODULE = 'timetable.spiders'
 DEFAULT_ITEM_CLASS = 'timetable.items.TimetableItem'
-ITEM_PIPELINES = ['timetable.pipelines.TimetablePipeline']
-USER_AGENT = '%s/%s' % (BOT_NAME, BOT_VERSION)
+ITEM_PIPELINES = [#'timetable.pipelines.TimetablePipeline',
+        'timetable.pipelines.MySQLStorePipeline']
+#USER_AGENT = '%s/%s' % (BOT_NAME, BOT_VERSION)
+USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.133 Safari/534.16'
 
