@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vnukovo Flights</title>
+    </head>
+    <body>
+        <h1>Flights</h1>
+        {% for flight in flights %}
+            <div>
+                <h3>{{ flight.flight }}</h3>
+                <ul> 
+                    {% for name, value in flight.get_fields %}
+                        <li>{{ name }}: {{ value|default:"-" }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </body>
+</html>

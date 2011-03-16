@@ -16,28 +16,14 @@ class VnukovoSpider(BaseSpider):
         hxs = HtmlXPathSelector(response)
         items = []
         flights = hxs.select('//table[@id="TimeTable"]/tbody/tr')
-        for flight in flights:
+        for flight in flights[:2]:
             loader = TimetableLoader(item=TimetableItem(), selector=flight)
             fields = ('flight', 'airline', 'airport_of_departure',
                     'airport_of_arrival', 'flight_status',
                     'datetime_scheduled', 'datetime_estimated',
-                    'datetime_actual', 'terminal', 'comments')
+                    'datetime_actual', 'terminal', 'comment')
             for idx, field in enumerate(fields, start=1):
                 loader.add_xpath(field, 'td[%s]//text()' % idx)
             items.append(loader.load_item())
             #yield loader.load_item()
         return items
-        """
-        flights = hxs.select('//table[@id="TimeTable"]/tbody/tr')
-        items = []
-        for flight in flights:
-            item = TimetableItem()
-            fields = ('flight', 'airline', 'airport_of_departure',
-                    'airport_of_arrival', 'flight_status',
-                    'datetime_scheduled', 'datetime_estimated',
-                    'datetime_actual', 'terminal', 'comments')
-            for idx, field in enumerate(fields, start=1):
-                item[field] = flight.select('td[%s]//text()' % idx).extract()
-            items.append(item)
-        return items
-        """ 

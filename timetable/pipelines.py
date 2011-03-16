@@ -9,6 +9,8 @@ from scrapy import signals
 from scrapy.contrib.exporter import BaseItemExporter
 from twisted.enterprise import adbapi
 import MySQLdb.cursors
+from restful_lib import Connection
+import json
 
 class PrintItemExporter(BaseItemExporter):
     def __init__(self, file=file, *args, **kwargs):
@@ -80,13 +82,13 @@ class MySQLStorePipeline(object):
                     "datetime_scheduled = %s, "
                     "datetime_estimated = %s, "
                     "datetime_actual = %s, "
-                    "comments = %s "
+                    "comment = %s "
                     "where flight = %s", (
                         item['flight_status'],
                         item['datetime_scheduled'],
                         item['datetime_estimated'], 
                         item['datetime_actual'],
-                        item['comments'],
+                        item['comment'],
                         item['flight'] 
                     )
                 )
@@ -95,7 +97,7 @@ class MySQLStorePipeline(object):
             tx.execute(
                 "insert into timetable_vnukovo (flight, airline, airport_of_departure, "
                 "airport_of_arrival, flight_status, datetime_scheduled, datetime_estimated, "
-                "datetime_actual, terminal, comments) "
+                "datetime_actual, terminal, comment) "
                 "values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", (
                     item['flight'], 
                     item['airline'], 
@@ -106,10 +108,32 @@ class MySQLStorePipeline(object):
                     item['datetime_estimated'],
                     item['datetime_actual'], 
                     item['terminal'], 
-                    item['comments']
+                    item['comment']
                 )
             )
             log.msg("Item stored in db", level=log.DEBUG)
 
     def handle_error(self, e):
         log.err(e)
+
+class RestPipeline(object):
+    def __init__(self):
+        base_url = "http://localhost:8888/api"
+        self.conn = Connection(base_url)
+
+    def process_item(self, item, spider):
+        data = dict(item.items())
+        for k in data:
+            if k in ('datetime_scheduled', 'datetime_estimated', 'datetime_actual'):
+                if data[k]:
+                    data[k] = data[k].isoformat(' ')
+                else:
+                    data[k] = None
+            else:
+                data[k] = data[k].encode('utf-8')
+        
+        data = json.dumps(data)
+        resp = self.conn.request_post("/flights.json", args={'data': data})
+        log.msg('Response: %s' % resp, level=log.DEBUG)
+        return item
+

@@ -10,8 +10,11 @@ from datetime import datetime
 def to_datetime(value):
     if value == '-':
         return None
-    value = datetime.strptime(value, "%H:%M %d.%m").replace(
+    try:
+        value = datetime.strptime(value, "%H:%M %d.%m").replace(
             year=datetime.now().year)
+    except ValueError:
+        return None
     return value
 
 class TimetableItem(Item):
@@ -24,5 +27,5 @@ class TimetableItem(Item):
     datetime_estimated = Field(output_processor=Compose(Join(), to_datetime))
     datetime_actual = Field(output_processor=Compose(Join(), to_datetime))
     terminal = Field()
-    comments = Field()
+    comment = Field()
 
