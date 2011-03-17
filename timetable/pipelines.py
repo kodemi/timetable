@@ -12,36 +12,6 @@ import MySQLdb.cursors
 from restful_lib import Connection
 import json
 
-class PrintItemExporter(BaseItemExporter):
-    def __init__(self, file=file, *args, **kwargs):
-        self.file = file 
-        super(PrintItemExporter, self).__init__(*args, **kwargs)
-
-    def export_item(self, item):
-        string = u"\n".join([u"{0}: {1}".format(k, v) for k,v in item.items()]).encode('utf-8')
-        self.file.write(string)    
-        self.file.write('\n\n')
-
-class TimetablePipeline(object):
-    def __init__(self):
-        dispatcher.connect(self.spider_opened, signals.spider_opened)
-        dispatcher.connect(self.spider_closed, signals.spider_closed)
-        self.files = {}
-
-    def spider_opened(self, spider):
-        file = open('%s_flights' % spider.name, 'w')
-        self.files[spider] = file
-        self.exporter = PrintItemExporter(file=file)
-        self.exporter.start_exporting()
-
-    def spider_closed(self, spider):
-        self.exporter.finish_exporting()
-        file = self.files.pop(spider)
-        file.close()
-
-    def process_item(self, item, spider):
-        self.exporter.export_item(item)
-        return item
 
 class MySQLStorePipeline(object):
     def __init__(self):
@@ -95,11 +65,14 @@ class MySQLStorePipeline(object):
                 log.msg("Item updated in db", level=log.DEBUG)
         else:
             tx.execute(
-                "insert into timetable_vnukovo (flight, airline, airport_of_departure, "
-                "airport_of_arrival, flight_status, datetime_scheduled, datetime_estimated, "
+                "insert into timetable_vnukovo (flight, flight_type, "
+                "airline, airport_of_departure, "
+                "airport_of_arrival, flight_status, "
+                "datetime_scheduled, datetime_estimated, "
                 "datetime_actual, terminal, comment) "
                 "values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", (
                     item['flight'], 
+                    item['flight_type'], 
                     item['airline'], 
                     item['airport_of_departure'],
                     item['airport_of_arrival'], 
@@ -116,6 +89,7 @@ class MySQLStorePipeline(object):
     def handle_error(self, e):
         log.err(e)
 
+
 class RestPipeline(object):
     def __init__(self):
         base_url = "http://localhost:8888/api"
@@ -129,6 +103,8 @@ class RestPipeline(object):
                     data[k] = data[k].isoformat(' ')
                 else:
                     data[k] = None
+            elif k == 'flight_type':
+                continue
             else:
                 data[k] = data[k].encode('utf-8')
         

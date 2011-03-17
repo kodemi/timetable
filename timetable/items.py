@@ -17,7 +17,14 @@ def to_datetime(value):
         return None
     return value
 
+def checkin_desk_processor(value):
+    if value == '0':
+        return ''
+    else:
+        return value
+
 class TimetableItem(Item):
+    flight_type = Field()
     flight = Field()
     airline = Field()
     airport_of_departure = Field()
@@ -28,4 +35,5 @@ class TimetableItem(Item):
     datetime_actual = Field(output_processor=Compose(Join(), to_datetime))
     terminal = Field()
     comment = Field()
+    checkin_desk = Field(output_processor=Compose(checkin_desk_processor))
 

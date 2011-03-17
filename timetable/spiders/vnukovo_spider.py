@@ -8,12 +8,14 @@ class VnukovoSpider(BaseSpider):
     name = "vnukovo.ru"
     allowed_domains = ["vnukovo.ru"]
     start_urls = [
+        "http://vnukovo.ru/rus/for-passengers/board/index.wbp?time-table.direction=0",
         "http://vnukovo.ru/rus/for-passengers/board/index.wbp?time-table.direction=1",
-        "http://vnukovo.ru/rus/for-passengers/board/index.wbp?time-table.direction=0"
     ]
 
     def parse(self, response):
         hxs = HtmlXPathSelector(response)
+        # flight_type: 0 - arrival; 1 - departure
+        flight_type = 0 if response.request.url == self.start_urls[0] else 1
         items = []
         flights = hxs.select('//table[@id="TimeTable"]/tbody/tr')
         for flight in flights[:2]:
@@ -24,6 +26,8 @@ class VnukovoSpider(BaseSpider):
                     'datetime_actual', 'terminal', 'comment')
             for idx, field in enumerate(fields, start=1):
                 loader.add_xpath(field, 'td[%s]//text()' % idx)
-            items.append(loader.load_item())
+            loader.add_value('flight_type', flight_type)
+            item = loader.load_item()
+            items.append(item)
             #yield loader.load_item()
         return items
