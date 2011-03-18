@@ -1,6 +1,5 @@
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
-#from scrapy.contrib.loader import XPathItemLoader
 from timetable.items import TimetableItem
 from timetable.itemloaders import TimetableLoader
 
