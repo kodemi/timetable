@@ -4,8 +4,7 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/topics/item-pipeline.html
 from scrapy import log
-from scrapy.xlib.pydispatch import dispatcher
-from scrapy import signals
+from scrapy.conf import settings
 from scrapy.contrib.exporter import BaseItemExporter
 from twisted.enterprise import adbapi
 import MySQLdb.cursors
@@ -16,9 +15,9 @@ import json
 class MySQLStorePipeline(object):
     def __init__(self):
         self.dbpool = adbapi.ConnectionPool('MySQLdb',
-                db='timetable',
-                user='root',
-                passwd='n5hgcb-jhf',
+                db=settings.get('DATABASE_NAME'),
+                user=settings.get('DATABASE_USER'),
+                passwd=settings.get('DATABASE_PASSWORD'),
                 cursorclass=MySQLdb.cursors.DictCursor,
                 charset='utf8',
                 use_unicode=True
@@ -92,7 +91,7 @@ class MySQLStorePipeline(object):
 
 class RestPipeline(object):
     def __init__(self):
-        base_url = "http://localhost:8888/api"
+        base_url = settings.get('API_BASE_URL')
         self.conn = Connection(base_url)
 
     def process_item(self, item, spider):

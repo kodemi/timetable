@@ -18,3 +18,9 @@ ITEM_PIPELINES = [#'timetable.pipelines.TimetablePipeline',
 #USER_AGENT = '%s/%s' % (BOT_NAME, BOT_VERSION)
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.133 Safari/534.16'
 
+DATABASE_NAME = ''
+DATABASE_USER = ''
+DATABASE_PASSWORD = ''
+
+API_BASE_URL = 'http://localhost:8000/api'
+
