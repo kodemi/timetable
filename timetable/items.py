@@ -35,5 +35,5 @@ class TimetableItem(Item):
     datetime_actual = Field(output_processor=Compose(Join(), to_datetime))
     terminal = Field()
     comment = Field()
-    checkin_desk = Field(output_processor=Compose(checkin_desk_processor))
+    checkin_desk = Field(output_processor=Compose(Join(), checkin_desk_processor))
 

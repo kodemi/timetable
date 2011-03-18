@@ -7,5 +7,5 @@ def return_first(value):
 class TimetableLoader(XPathItemLoader):
    default_output_processor = Join()
    default_input_processor = MapCompose(unicode.strip)
-   flight_type_in = Identity()
-   flight_type_out = Compose(return_first)
+#   flight_type_in = Identity()
+#   flight_type_out = Compose(return_first)

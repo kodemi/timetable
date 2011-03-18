@@ -23,11 +23,15 @@ class VnukovoSpider(BaseSpider):
             fields = ('flight', 'airline', 'airport_of_departure',
                     'airport_of_arrival', 'flight_status',
                     'datetime_scheduled', 'datetime_estimated',
-                    'datetime_actual', 'terminal', 'comment')
+                    'datetime_actual', 'terminal')
             for idx, field in enumerate(fields, start=1):
                 loader.add_xpath(field, 'td[%s]//text()' % idx)
-            loader.add_value('flight_type', flight_type)
+            fields = ('checkin_desk', 'comment')
+            field_xpath, field_value = fields if flight_type else (fields[1], fields[0])
+            loader.add_xpath(field_xpath, 'td[10]//text()')
             item = loader.load_item()
+            item[field_value] = u''
+            item['flight_type'] = flight_type
             items.append(item)
             #yield loader.load_item()
         return items
