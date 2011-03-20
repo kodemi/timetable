@@ -5,8 +5,13 @@ from django.template import RequestContext
 
 from timetable.vnukovo.models import Flight
 
-def flights(request):
+def flights(request, mobile=False):
     flights = Flight.objects.all()
-    return render_to_response("vnukovo/flights.html", {
-        'flights': flights },
-        RequestContext(request))
+    if mobile:
+        return render_to_response("vnukovo/mobile.html", {
+            'flights': flights },
+            RequestContext(request))
+    else:
+        return render_to_response("vnukovo/flights.html", {
+            'flights': flights },
+            RequestContext(request))
