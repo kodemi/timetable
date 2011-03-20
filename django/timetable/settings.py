@@ -127,6 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'vnukovo',
     'api',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging
