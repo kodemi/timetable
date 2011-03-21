@@ -96,12 +96,35 @@
 <script type="text/template" id="item-template">
     <div class="ui-btn-inner">
         <div class="ui-btn-text"> 
-            <h3 class="ui-li-heading">
-                <%= flight %> 
-            </h3>
-            <p class="ui-li-desc">
-                <%= airline %>
-            </p>
+            <div class="flight">
+                <h3>
+                    <%= flight %> 
+                </h3>
+            </div>
+            <div class="fl-content">
+                <p >
+                    <%= airline %>
+                </p>
+                <p>
+                    <%= airport_of_departure %>  --&gt;  <%= airport_of_arrival %>
+                </p>
+            </div>
+            <div class="flight-status">
+                <p>
+                    <%= flight_status %>
+                </p>
+            </div>
+            <div class="datetime">
+                <p>
+                    Запланирован: <%= datetime_scheduled %></br>
+                </p>
+                <p>
+                    Ожидается: <%= datetime_estimated %></br>
+                </p>
+                <p>
+                    Фактически: <%= datetime_actual %>
+                </p>
+            </div>
         </div>
     </div>
 </script>
@@ -119,6 +142,25 @@
     .landscape, .landscape .ui-page, .portrait, .portrait .ui-page {
         min-height: 100%;
     }
+</style>
+<style type="text/css">
+    .flight {
+        font-size: x-large;
+    }
+    .flight, .fl-content{
+        float: left;
+        display: block;
+        margin-right: 10px;
+    }
+    .datetime, .fl-content{
+        font-size: x-small;
+    }
+    .flight-status, .datetime {
+        float: right;
+        display: block;
+        margin-left: 20px;
+    }
+
 </style>
         <title>Vnukovo Flights</title>
     </head>
