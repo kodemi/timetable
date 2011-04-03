@@ -36,12 +36,12 @@ class FlightHandler(BaseHandler):
         try:
             inst = self.model.objects.get(**attrs)
             print 'Duplicate entry: %s' % inst
-            return rc.DUPLICATE_ENTRY
+            #return rc.DUPLICATE_ENTRY
+            return inst
         except self.model.MultipleObjectsReturned:
             return rc.DUPLICATE_ENTRY
         except self.model.DoesNotExist:
             inst = self.model(**attrs)
-
             try:
                 inst.full_clean()
             except ValidationError, e:
@@ -49,9 +49,17 @@ class FlightHandler(BaseHandler):
                 resp.write(' ')
                 resp.write(' '.join(["%s: %s;" % (k,v[0].rstrip('.')) for k,v in e.message_dict.items()]))
                 return resp
-            inst.save()
+            try:
+                exinst = self.model.objects.get(flight=attrs['flight'], datetime_scheduled=attrs['datetime_scheduled'])
+                exinst.flight_status = attrs['flight_status']
+                exinst.datetime_estimated = attrs['datetime_estimated']
+                exinst.datetime_actual = attrs['datetime_actual']
+                exinst.save()
+                return exinst
+            except self.model.DoesNotExist:
+                inst.save()
             #return serializers.serialize('json', [inst], ensure_ascii=False)
-            return inst
+                return inst
         except Exception, e:
             print 'Error: %s' % e
             resp = rc.BAD_REQUEST 
