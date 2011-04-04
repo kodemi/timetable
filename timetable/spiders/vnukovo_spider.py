@@ -28,6 +28,7 @@ class VnukovoSpider(BaseSpider):
             fields = ('checkin_desk', 'comment')
             field_xpath, field_value = fields if flight_type else (fields[1], fields[0])
             loader.add_xpath(field_xpath, 'td[10]//text()')
+            loader.add_value('airport', u'VKO')
             item = loader.load_item()
             item[field_value] = u''
             item['flight_type'] = flight_type

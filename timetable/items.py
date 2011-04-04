@@ -11,8 +11,12 @@ def to_datetime(value):
     if value == '-':
         return None
     try:
-        value = datetime.strptime(value, "%H:%M %d.%m").replace(
-            year=datetime.now().year)
+        if len(value.split()) == 2:
+            value = datetime.strptime(value, "%H:%M %d.%m").replace(
+                year=datetime.now().year)
+        else:
+            value = datetime.strptime(value, "%H:%M").replace(
+                year=datetime.now().year)
     except ValueError:
         return None
     return value
@@ -24,6 +28,7 @@ def checkin_desk_processor(value):
         return value
 
 class TimetableItem(Item):
+    airport = Field()
     flight_type = Field()
     flight = Field()
     airline = Field()
