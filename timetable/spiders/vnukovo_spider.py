@@ -2,6 +2,7 @@ from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 from timetable.items import TimetableItem
 from timetable.itemloaders import TimetableLoader
+import re
 
 class VnukovoSpider(BaseSpider):
     name = "vnukovo.ru"
@@ -32,6 +33,13 @@ class VnukovoSpider(BaseSpider):
             item = loader.load_item()
             item[field_value] = u''
             item['flight_type'] = flight_type
+            for field in [('city_of_departure', 'airport_of_departure'), ('city_of_arrival', 'airport_of_arrival')]:
+                city_airport = re.findall(r'(\w+)', item[field[1]])
+                item[field[0]] = city_airport[0]
+                if len(city_airport) == 2:
+                    item[field[1]] = city_airport[1]
+                else:
+                    item[field[1]] = ''
             items.append(item)
             #yield loader.load_item()
         return items

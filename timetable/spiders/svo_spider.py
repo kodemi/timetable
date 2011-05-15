@@ -37,6 +37,8 @@ class SvoSpider(BaseSpider):
             loader.add_xpath('datetime_actual', 'td[9]//text()')
             loader.add_xpath('terminal', 'td[10]//text()')
             loader.add_value('airport', u'SVO')
+            loader.add_value('city_of_departure', u'')
+            loader.add_value('city_of_arrival', u'')
             item = loader.load_item()
             nowdate = datetime.date(datetime.now())
             item['datetime_scheduled'] = item['datetime_scheduled'].replace(

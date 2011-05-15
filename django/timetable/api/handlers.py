@@ -5,6 +5,8 @@ from piston.handler import BaseHandler
 from piston.utils import rc
 from django.core import serializers
 import json
+import datetime
+import time
 
 from vnukovo.models import Flight
 
@@ -20,12 +22,41 @@ class FlightHandler(BaseHandler):
     def resource_uri(cls, flight):
         return ('flight', ['json', ])
 
-    def read(self, request, flight=None):
+    def read(self, request, flight=None, month=None, day=None, ffrom=None, fto=None):
         base = Flight.objects
+        filter_dict = {}
+        flight_date = False
+        if month and day:
+            try:
+                flight_date = datetime.date(year=datetime.datetime.now().year, month=int(month), day=int(day))
+            except TypeError:
+                return rc.BAD_REQUEST
         if flight:
-            return base.get(flight=flight)
-        else:
-            return base.all()
+            filter_dict['flight'] = flight
+        if flight_date:
+            filter_dict['datetime_scheduled__year'] = flight_date.year
+            filter_dict['datetime_scheduled__month'] = flight_date.month
+            filter_dict['datetime_scheduled__day'] = flight_date.day
+        if ffrom and ffrom != 'all':
+            filter_dict['airport_of_departure'] = ffrom
+        if fto and fto != 'all':
+            filter_dict['airport_of_arrival'] = fto
+        flights = base.filter(**filter_dict).values()
+        for flight in flights:
+            flight['datetime_estimated'] = flight['datetime_estimated'].ctime()
+            flight['datetime_scheduled'] = flight['datetime_scheduled'].ctime()
+            flight['datetime_actual'] = flight['datetime_actual'].ctime()
+        return flights
+#        if flight and flight_date:
+#            if ffrom and fto:
+#                return base.filter(datetime_scheduled__contains=flight_date.isoformat(), flight=flight, airport_of_departure=ffrom, airport_of_arrival=fto)
+#            else:
+#                return base.filter(datetime_scheduled__contains=flight_date.isoformat(), flight=flight)
+#        else:
+#            if flight_date and ffrom and fto:
+#                return base.filter(datetime_scheduled__contains=flight_date.isoformat(), airport_of_departure=ffrom, airport_of_arrival=fto)
+#            else:
+#                return base.all()
 
     def create(self, request):
         attrs = self.flatten_dict(request.POST)

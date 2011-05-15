@@ -17,8 +17,10 @@ class Flight(models.Model):
     flight = models.CharField(max_length=10)
     flight_type = models.BooleanField(choices=FLIGHT_TYPE_CHOICES)
     airline = models.CharField(max_length=50)
-    airport_of_departure = models.CharField(max_length=50)
-    airport_of_arrival = models.CharField(max_length=50)
+    airport_of_departure = models.CharField(max_length=50, default='', blank=True)
+    city_of_departure = models.CharField(max_length=50)
+    airport_of_arrival = models.CharField(max_length=50, default='', blank=True)
+    city_of_arrival = models.CharField(max_length=50)
     flight_status = models.CharField(max_length=20, default='', blank=True)
     datetime_scheduled = models.DateTimeField('Scheduled')
     datetime_estimated = models.DateTimeField('Estimated', null=True, blank=True)
@@ -42,7 +44,7 @@ class Flight(models.Model):
 class FlightAdmin(admin.ModelAdmin):
     fieldsets = [
             (None, {'fields': ['airport', 'flight', 'flight_type', 'airline', 'flight_status']}),
-            ('Airport', {'fields': ['airport_of_departure', 'airport_of_arrival']}),
+            ('Airport', {'fields': ['city_of_departure', 'airport_of_departure', 'city_of_arrival', 'airport_of_arrival']}),
             ('Date & Time', {'fields': ['datetime_scheduled', 'datetime_estimated', 'datetime_actual']}),
             (None, {'fields': ['terminal', 'comment', 'checkin_desk']}),
     ]
