@@ -22,4 +22,4 @@ DATABASE_NAME = ''
 DATABASE_USER = ''
 DATABASE_PASSWORD = ''
 
-API_BASE_URL = 'http://localhost:8080/api'
+API_BASE_URL = 'http://localhost:8000/api'

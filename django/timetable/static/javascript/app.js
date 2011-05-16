@@ -9,9 +9,7 @@ $(document).ready(function() {
     flight_datepicker.datepicker("setDate", "+0");
     var flight_date = flight_datepicker.datepicker("getDate");
     var dep_arr_templ = _.template("<b class='time'><% print((function(){" +
-            "if (!flight_type){" +
-            "   return '--'" +
-            "};" +
+            "if (flight_type){ return '--' };" +
             "var t;" +
             "if (status == 'приземлился'){" +
             "   t = time.actual" +
@@ -28,14 +26,15 @@ $(document).ready(function() {
             "if (!airport){" +
             "   airport = city" +
             "};" +
-            "return '(' + airport + (flight_type ? (' ' + terminal) : '') + ')' " +
+            "return '(' + airport + (!flight_type ? (' ' + terminal) : '') + ')' " +
             "})()); %>");
 
-    var status_templ = _.template("<span class='<% print((function(){" +
-            "if (status == 'приземлился'){" +
-            "   return 'status4'" +
-            "}" +
-            "})()); %>'><%= status %></span>");
+    var status_templ = _.template("<%= status %>");
+    // _.template("<span class='<% print((function(){" +
+            //"if (status == 'приземлился'){" +
+            //"   return 'status4'" +
+            //"}" +
+            //"})()); %>'><%= status %></span>");
 
     $("#show_timetable").live('click', function(){
         var flight, flight_from, flight_to, flight_filter;
@@ -68,7 +67,8 @@ $(document).ready(function() {
                 'actual': oObj.aData["datetime_actual"]
             },
             status: oObj.aData["flight_status"],
-            flight_type: !(flight_type ^ oObj.aData["fight_type"]),
+            flight_type: !(flight_type ^ oObj.aData["flight_type"]),
+
             city: flight_type?oObj.aData["city_of_departure"]:oObj.aData["city_of_arrival"],
             airport: flight_type?oObj.aData["airport_of_departure"]:oObj.aData["airport_of_arrival"],
             terminal: oObj.aData["terminal"]
@@ -81,19 +81,26 @@ $(document).ready(function() {
     };
     var dataTable = $('#timetable').dataTable( {
         "bProcessing": true,
-        "bPaginate": false,
+        //"bPaginate": true,
+        "sScrollY": "350px",
+        //"iDisplayLength": 5,
+        "bLengthChange": false,
+        //"sPaginationType": "full_numbers",
+        //"bScrollCollapse": true,
+        "bAutoWidth": false,
+        //"asStripClasses": ["artica", "center"],
         "bSort": false,
         "bFilter": false,
         "bInfo": false,
 		"sAjaxSource": null,
         "sAjaxDataProp": "",
         "aoColumns": [
-            { "mDataProp": "flight" }, // номер рейса
+            { "mDataProp": "flight", "sWidth": "6%" }, // номер рейса
             { "mDataProp": "airline" }, // авиакомпания
-            { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 1) }}, // вылет
-            { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 0) }}, // прилет
-            { "fnRender": function(oObj){ return  status_templ_func(oObj) }}, // статус
-            { "mDataProp": null } // смс
+            { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 1) }, "sWidth": "30%"}, // вылет
+            { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 0) }, "sWidth": "30%"}, // прилет
+            { "fnRender": function(oObj){ return  status_templ_func(oObj) }, "sWidth": "10%"}, // статус
+            { "mDataProp": "flight_type", "sWidth": "5%" } // смс
         ],
         "aoColumnDefs": [{
             "sClass": "center artica",

@@ -38,14 +38,16 @@ class FlightHandler(BaseHandler):
             filter_dict['datetime_scheduled__month'] = flight_date.month
             filter_dict['datetime_scheduled__day'] = flight_date.day
         if ffrom and ffrom != 'all':
-            filter_dict['airport_of_departure'] = ffrom
+            filter_dict['city_of_departure'] = ffrom.capitalize()
         if fto and fto != 'all':
-            filter_dict['airport_of_arrival'] = fto
+            filter_dict['city_of_arrival'] = fto.capitalize()
         flights = base.filter(**filter_dict).values()
         for flight in flights:
-            flight['datetime_estimated'] = flight['datetime_estimated'].ctime()
             flight['datetime_scheduled'] = flight['datetime_scheduled'].ctime()
-            flight['datetime_actual'] = flight['datetime_actual'].ctime()
+            if flight['datetime_estimated']:
+                flight['datetime_estimated'] = flight['datetime_estimated'].ctime()
+            if flight['datetime_actual']:
+                flight['datetime_actual'] = flight['datetime_actual'].ctime()
         return flights
 #        if flight and flight_date:
 #            if ffrom and fto:

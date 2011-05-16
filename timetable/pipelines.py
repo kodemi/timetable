@@ -107,7 +107,7 @@ class RestPipeline(object):
             else:
                 data[k] = data[k].encode('utf-8')
         data = json.dumps(data)
-        resp = self.conn.request_post("/flights.json", args={'data': data})
-        log.msg('Response: %s' % resp, level=log.DEBUG)
+        resp = self.conn.request_post("/flights", args={'data': data})
+        #log.msg('Response: %s' % resp, level=log.DEBUG)
         return item
 
