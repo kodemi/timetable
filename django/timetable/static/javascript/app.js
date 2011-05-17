@@ -9,12 +9,12 @@ $(document).ready(function() {
     flight_datepicker.datepicker("setDate", "+0");
     var flight_date = flight_datepicker.datepicker("getDate");
     var dep_arr_templ = _.template("<b class='time'><% print((function(){" +
-            "if (flight_type){ return '--' };" +
+            "if (!flight_type){ return '--' };" +
             "var t;" +
-            "if (status == 'приземлился'){" +
+            "if (time.actual){" +
             "   t = time.actual" +
             "} else {" +
-            "   t = time.estimated" +
+            "   t = time.estimated ? time.estimated : time.scheduled" +
             "};" +
             "var d = new Date(t+' GMT+0000');" +
             "hours = d.getUTCHours();" +
@@ -26,7 +26,7 @@ $(document).ready(function() {
             "if (!airport){" +
             "   airport = city" +
             "};" +
-            "return '(' + airport + (!flight_type ? (' ' + terminal) : '') + ')' " +
+            "return '(' + airport + (flight_type ? (' ' + terminal) : '') + ')' " +
             "})()); %>");
 
     var status_templ = _.template("<%= status %>");
@@ -35,6 +35,12 @@ $(document).ready(function() {
             //"   return 'status4'" +
             //"}" +
             //"})()); %>'><%= status %></span>");
+
+    var datetime_templ = _.template("<% print((function(){" +
+            "if (actual){ return actual + ' GMT+0000'};" +
+            "if (estimated){ return estimated + ' GMT+0000'};" +
+            "return scheduled + ' GMT+0000'" +
+            "})()); %>");
 
     $("#show_timetable").live('click', function(){
         var flight, flight_from, flight_to, flight_filter;
@@ -60,9 +66,11 @@ $(document).ready(function() {
         flight_filter = flight_from + "_" + flight_to + "/" + flight;
         dataTable.fnReloadAjax("/api/" + addZero(flight_date.getMonth() + 1) + "/" + addZero(flight_date.getDate()) + "/" + flight_filter)
     });
+
     var dep_arr_templ_func = function(oObj, flight_type){
         return dep_arr_templ({
             time: {
+                'scheduled': oObj.aData["datetime_scheduled"],
                 'estimated': oObj.aData["datetime_estimated"],
                 'actual': oObj.aData["datetime_actual"]
             },
@@ -74,33 +82,46 @@ $(document).ready(function() {
             terminal: oObj.aData["terminal"]
         })
     };
+
     var status_templ_func = function(oObj){
         return status_templ({
             status: oObj.aData["flight_status"]
         })
     };
+
+    var datetime_templ_func = function(oObj){
+        return datetime_templ({
+            scheduled: oObj.aData["datetime_scheduled"],
+            estimated: oObj.aData["datetime_estimated"],
+            actual: oObj.aData["datetime_actual"]
+        })
+    };
+
     var dataTable = $('#timetable').dataTable( {
         "bProcessing": true,
-        //"bPaginate": true,
-        "sScrollY": "350px",
-        //"iDisplayLength": 5,
+        "bPaginate": true,
+        //"sScrollY": "350px",
+        "iDisplayLength": 6,
         "bLengthChange": false,
-        //"sPaginationType": "full_numbers",
+        "sPaginationType": "full_numbers",
         //"bScrollCollapse": true,
         "bAutoWidth": false,
         //"asStripClasses": ["artica", "center"],
-        "bSort": false,
+        "bSort": true,
         "bFilter": false,
         "bInfo": false,
 		"sAjaxSource": null,
         "sAjaxDataProp": "",
+        "aaSorting": [[6,"asc"]],
+        "bSortClasses": false,
         "aoColumns": [
-            { "mDataProp": "flight", "sWidth": "6%" }, // номер рейса
-            { "mDataProp": "airline" }, // авиакомпания
-            { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 1) }, "sWidth": "30%"}, // вылет
-            { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 0) }, "sWidth": "30%"}, // прилет
-            { "fnRender": function(oObj){ return  status_templ_func(oObj) }, "sWidth": "10%"}, // статус
-            { "mDataProp": "flight_type", "sWidth": "5%" } // смс
+            { "mDataProp": "flight", "sWidth": "6%", "bSortable": false }, // номер рейса
+            { "mDataProp": "airline", "bSortable": false }, // авиакомпания
+            { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 1) }, "sWidth": "30%", "bSortable": false}, // вылет
+            { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 0) }, "sWidth": "30%", "bSortable": false}, // прилет
+            { "fnRender": function(oObj){ return  status_templ_func(oObj) }, "sWidth": "10%", "bSortable": false}, // статус
+            { "mDataProp": "flight_type", "sWidth": "5%", "bSortable": false }, // смс
+            { "fnRender": function(oObj){ return datetime_templ_func(oObj) }, bVisible: false, sType: "date" }
         ],
         "aoColumnDefs": [{
             "sClass": "center artica",
@@ -108,7 +129,13 @@ $(document).ready(function() {
         }],
         "oLanguage": {
 			"sEmptyTable": "Рейсы не найдены",
-            "sProcessing": "Производится поиск..."
+            "sProcessing": "Производится поиск...",
+            "oPaginate": {
+                "sFirst": "Первые",
+                "sLast": "Последние",
+                "sNext": "Следующие",
+                "sPrevious": "Предыдущие"
+            }
 		}
 	} );
 } );

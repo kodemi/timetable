@@ -20,7 +20,7 @@ class SvoSpider(BaseSpider):
         hxs = HtmlXPathSelector(response)
         items = []
         flights = hxs.select('//div[@class="table"]/table/tbody/tr')
-        for flight in flights[:10]:
+        for flight in flights[:20]:
             item = next(self.parse_main_contents(flight, response))
             items.append(item)
         return items
