@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 from timetable.items import TimetableItem
@@ -33,13 +34,19 @@ class VnukovoSpider(BaseSpider):
             item = loader.load_item()
             item[field_value] = u''
             item['flight_type'] = flight_type
-            for field in [('city_of_departure', 'airport_of_departure'), ('city_of_arrival', 'airport_of_arrival')]:
-                city_airport = re.findall(r'(\w+)', item[field[1]])
-                item[field[0]] = city_airport[0]
+            city_airport_dict = {}
+            for direction in ('departure', 'arrival'):
+                city_airport = re.findall(r'[^\(\)]+', item['airport_of_%s' % direction], re.U)
                 if len(city_airport) == 2:
-                    item[field[1]] = city_airport[1]
+                    city, airport = city_airport
                 else:
-                    item[field[1]] = ''
+                    city, airport = city_airport[0], u''
+                city_airport_dict[direction] = (city, airport)
+            if flight_type:
+                item['city_of_arrival'], item['airport_of_arrival'] = city_airport_dict['arrival']
+                item['city_of_departure'], item['airport_of_departure'] = u'Москва', u'Внуково'
+            else:
+                item['city_of_arrival'], item['airport_of_arrival'] = u'Москва', u'Внуково'
+                item['city_of_departure'], item['airport_of_departure'] = city_airport_dict['departure']
             items.append(item)
-            #yield loader.load_item()
         return items

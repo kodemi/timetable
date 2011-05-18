@@ -11,12 +11,20 @@ def to_datetime(value):
     if value == '-':
         return None
     try:
-        if len(value.split()) == 2:
-            value = datetime.strptime(value, "%H:%M %d.%m").replace(
-                year=datetime.now().year)
-        else:
+        date_list = value.split()
+        if len(date_list) == 2:
+            try:
+                value = datetime.strptime(value, "%H:%M %d.%m").replace(
+                    year=datetime.now().year)
+            except ValueError:
+                value = datetime.strptime(value, "%d.%m %H:%M").replace(
+                    year=datetime.now().year)
+        elif len(date_list) == 1:
             value = datetime.strptime(value, "%H:%M").replace(
                 year=datetime.now().year)
+        else:
+            value = datetime.strptime(date_list[2], "%H:%M").replace(
+                year=datetime.now().year, month=datetime.now().month, day=int(date_list[0]))
     except ValueError:
         return None
     return value

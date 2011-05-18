@@ -42,7 +42,7 @@ body {
 padding:0;
 margin:0;
 color:#333333;
-font-family: Calibri,arial, sans-serif;
+font-family: verdana, arial, sans-serif;
 font-size:13px;
 }
 
@@ -54,7 +54,7 @@ div, button, input {
 margin:0;
 padding:0;
 border:none;
-font-family: Calibri,arial, sans-serif;
+font-family: verdana, arial, sans-serif;
 }
 button {
 outline:none;
@@ -217,7 +217,8 @@ margin:20px 0;
 }
 .menu {
 color:#ffffff;
-margin-bottom:75px
+margin-bottom:75px;
+
 }
 .menu button {
 
@@ -234,6 +235,7 @@ height:28px;
 margin-bottom:8px;
 text-decoration:none;
 padding:9px 0 0 5px;
+font-family: Calibri;
 }
 
 .menubutton1 {
@@ -326,7 +328,7 @@ margin-bottom:15px;
 }
 
 .tshirtsdiv {
-height:250px;
+height:270px;
 border:1px solid #fce69b;
 }
 
@@ -334,13 +336,14 @@ a.tshirts, a.tshirts:visited {
 background:url("../images/honey plate.jpg") repeat-x;
 margin-bottom:5px !important;
 text-align:center;
-font-size:16px;
+font-size:14px;
 color:#ffffff;
 display:block;
 height:26px;
 margin-bottom:8px;
 text-decoration:none;
 padding:4px 0 0 5px;
+font-family: verdana;
 }
 
 .mid_content {
@@ -435,6 +438,9 @@ width:223px;
 margin: 8px auto 0 auto;
 }
 
+.search_back{
+    width:295px;
+}
 .opform input {
 position:relative;
 top:1px;
@@ -455,16 +461,16 @@ height:125px;
 position:relative;
 }
 .flight_search input {
-width:100px;
+width:130px;
 height:18px;
 color:#999999;
 border:1px solid #939ca3;
-padding:2px 3px 3px 3px;
+padding:2px 1px 2px 2px;
 position:relative;
 font-size:15px;
 }
 button.tableau_button {
-width:225px;
+width:285px;
 height:27px;
 display:block;
 background:url("../images/tableau buttons.jpg") repeat-x;
@@ -507,18 +513,18 @@ position:absolute;
 bottom:0px;
 }
 span.status1 {
-color:#99cc33;
+color: #339900;
 }
 
 span.status2 {
-color:#ff9933;
+color: #ff0000;
 }
 
 span.status3 {
-color:#333333;
+color: #ff9933;
 }
 span.status4 {
-color:#669999;
+color: #3333ff;
 }
 
 .flightdiv {

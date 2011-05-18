@@ -20,7 +20,7 @@ class SvoSpider(BaseSpider):
         hxs = HtmlXPathSelector(response)
         items = []
         flights = hxs.select('//div[@class="table"]/table/tbody/tr')
-        for flight in flights[:20]:
+        for flight in flights[:5]:
             item = next(self.parse_main_contents(flight, response))
             items.append(item)
         return items
@@ -30,12 +30,6 @@ class SvoSpider(BaseSpider):
         flight_type = flight.select('@class').extract()[0].split()
         flight_type = 0 if 'sA' in flight_type else 1
         loader = TimetableLoader(item=TimetableItem(), selector=flight)
-#        if flight_type:
-#            loader.add_xpath('airport_of_arrival', 'td[4]//text()')
-#            loader.add_value('airport_of_departure', SVO)
-#        else:
-#            loader.add_xpath('airport_of_departure', 'td[4]//text()')
-#            loader.add_value('airport_of_arrival', SVO)
         loader.add_xpath('flight', 'td[2]//text()')
         loader.add_xpath('airline', 'td[3]//@alt')
         loader.add_xpath('flight_status', 'td[5]//text()')
@@ -67,6 +61,7 @@ class SvoSpider(BaseSpider):
         flight_route = hxs.select('//div[@class="content"]/table/tr[5]/td[2]/text()').extract()[0]
         departure, arrival = flight_route.split(u'\u2192')
         item = response.request.meta['item']
-        item['city_of_departure'], item['airport_of_departure'] = re.findall(r'(\w+)', departure, re.U)
-        item['city_of_arrival'], item['airport_of_arrival'] = re.findall(r'(\w+)', arrival, re.U)
+        #print departure, re.findall(r'[^\(\)]+', departure, re.U)
+        item['city_of_departure'], item['airport_of_departure'] = [x.strip() for x in re.findall(r'[^\(\)]+', departure.strip(), re.U)]
+        item['city_of_arrival'], item['airport_of_arrival'] = [x.strip() for x in re.findall(r'[^\(\)]+', arrival.strip(), re.U)]
         yield item

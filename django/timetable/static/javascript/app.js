@@ -26,21 +26,28 @@ $(document).ready(function() {
             "if (!airport){" +
             "   airport = city" +
             "};" +
+            "console.log(airport + flight_type);" +
             "return '(' + airport + (flight_type ? (' ' + terminal) : '') + ')' " +
             "})()); %>");
 
-    var status_templ = _.template("<%= status %>");
-    // _.template("<span class='<% print((function(){" +
-            //"if (status == 'приземлился'){" +
-            //"   return 'status4'" +
-            //"}" +
-            //"})()); %>'><%= status %></span>");
+    var status_templ = _.template("<span class='<% print((function(){" +
+            "if (status == 'прилетел'){" +
+            "   return 'status4'" +
+            "} else if (status == 'не вылетел' || status == 'отменен'){" +
+            "   return 'status2'" +
+            "} else if (status == 'задержан'){" +
+            "   return 'status3'" +
+            "} else {" +
+            "   return 'status1'" +
+            "}" +
+            "})()); %>'><%= status %></span>");
 
     var datetime_templ = _.template("<% print((function(){" +
             "if (actual){ return actual + ' GMT+0000'};" +
             "if (estimated){ return estimated + ' GMT+0000'};" +
             "return scheduled + ' GMT+0000'" +
             "})()); %>");
+    var sms_templ = _.template('<a href=""><img border="0" src="static/images/smsicon.jpg"/></a>');
 
     $("#show_timetable").live('click', function(){
         var flight, flight_from, flight_to, flight_filter;
@@ -120,7 +127,7 @@ $(document).ready(function() {
             { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 1) }, "sWidth": "30%", "bSortable": false}, // вылет
             { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 0) }, "sWidth": "30%", "bSortable": false}, // прилет
             { "fnRender": function(oObj){ return  status_templ_func(oObj) }, "sWidth": "10%", "bSortable": false}, // статус
-            { "mDataProp": "flight_type", "sWidth": "5%", "bSortable": false }, // смс
+            { "fnRender": function(oObj){ return sms_templ() }, "sWidth": "5%", "bSortable": false }, // смс
             { "fnRender": function(oObj){ return datetime_templ_func(oObj) }, bVisible: false, sType: "date" }
         ],
         "aoColumnDefs": [{

@@ -10,6 +10,8 @@ FLIGHT_TYPE_CHOICES = (
 AIRPORT_CHOISE = (
     ('VKO', u'Внуково'),
     ('SVO', u'Шереметьево'),
+    ('DME', u'Домодедово'),
+    ('LED', u'Пулково')
 )
 
 class Flight(models.Model):
@@ -25,7 +27,7 @@ class Flight(models.Model):
     datetime_scheduled = models.DateTimeField('Scheduled')
     datetime_estimated = models.DateTimeField('Estimated', null=True, blank=True)
     datetime_actual = models.DateTimeField('Actual', null=True, blank=True)
-    terminal = models.CharField(max_length=3)
+    terminal = models.CharField(max_length=3, blank=True)
     comment = models.CharField(max_length=250, default='', blank=True)
     checkin_desk = models.CharField('Check-in desk', max_length=10, default='', blank=True)
     
