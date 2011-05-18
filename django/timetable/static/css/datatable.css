@@ -75,6 +75,7 @@
 	* width: 50px;
 	float: right;
 	text-align: right;
+    margin-top: 20px;
 }
 
 /* Pagination nested */
