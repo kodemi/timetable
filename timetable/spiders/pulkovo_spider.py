@@ -11,9 +11,9 @@ class PulkovoSpider(BaseSpider):
     allowed_domains = ["pulkovoairport.ru"]
     start_urls = [
         "http://www.pulkovoairport.ru/online_serves/online_timetable/arrivals/?p=1",
-        #"http://www.pulkovoairport.ru/online_serves/online_timetable/arrivals/?p=2",
-        #"http://www.pulkovoairport.ru/online_serves/online_timetable/departures/?p=1",
-        #"http://www.pulkovoairport.ru/online_serves/online_timetable/departures/?p=2"
+        "http://www.pulkovoairport.ru/online_serves/online_timetable/arrivals/?p=2",
+        "http://www.pulkovoairport.ru/online_serves/online_timetable/departures/?p=1",
+        "http://www.pulkovoairport.ru/online_serves/online_timetable/departures/?p=2"
     ]
 
     def parse(self, response):
@@ -22,7 +22,7 @@ class PulkovoSpider(BaseSpider):
         flight_type = 0 if response.request.url in self.start_urls[:2] else 1
         items = []
         flights = hxs.select('//table[@class="tablo tabloBigNew bigTableZebra"]/tr[position() != 1 and position() != 8]')
-        for flight in flights[:10:2]:
+        for flight in flights[::2]:
             loader = TimetableLoader(item=TimetableItem(), selector=flight)
             loader.add_xpath('flight', 'td[1]//text()')
             loader.add_xpath('datetime_scheduled', 'td[3]//text()')

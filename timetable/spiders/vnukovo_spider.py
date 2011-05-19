@@ -19,7 +19,7 @@ class VnukovoSpider(BaseSpider):
         flight_type = 0 if response.request.url == self.start_urls[0] else 1
         items = []
         flights = hxs.select('//table[@id="TimeTable"]/tbody/tr')
-        for flight in flights[:2]:
+        for flight in flights:
             loader = TimetableLoader(item=TimetableItem(), selector=flight)
             fields = ('flight', 'airline', 'airport_of_departure',
                     'airport_of_arrival', 'flight_status',
