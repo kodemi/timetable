@@ -15,3 +15,7 @@ def flights(request, mobile=False):
         return render_to_response("vnukovo/flights.html", {
             'flights': flights },
             RequestContext(request))
+
+def flights_new(request, mobile=False):
+    return render_to_response("vnukovo/flights1.html", {},
+            RequestContext(request))

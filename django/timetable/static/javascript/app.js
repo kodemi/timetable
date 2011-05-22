@@ -26,7 +26,6 @@ $(document).ready(function() {
             "if (!airport){" +
             "   airport = city" +
             "};" +
-            "console.log(airport + flight_type);" +
             "return '(' + airport + (flight_type ? (' ' + terminal) : '') + ')' " +
             "})()); %>");
 
