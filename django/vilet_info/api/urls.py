@@ -2,7 +2,7 @@ from django.conf.urls.defaults import *
 from piston.resource import Resource
 from piston.doc import documentation_view
 
-from timetable.api.handlers import FlightHandler
+from api.handlers import FlightHandler
 
 
 flight_handler = Resource(FlightHandler)
