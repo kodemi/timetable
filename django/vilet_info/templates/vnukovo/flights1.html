@@ -37,9 +37,56 @@
 <body>
 
   <div id="container">
-    <header>
-        <a href=""><img class="logoimg" border="0" src="{{ STATIC_URL }}images/logo.jpg"></a>
+    <header id="mainHeader">
+        <h1 class="hidden">vilet.info - инструмент путешественника</h1>
+        <div id="topHeaderPanel">
+            <!--<div id="login">-->
+                <form id="login" method="">
+                    <button class="headerButton">Войти в личный кабинет</button>
+                    <button class="headerButton">Регистрация</button>
+                </form>
+            <!--</div>-->
+            <!--<div id="search">-->
+                <form id="search_box" method="post">
+                    <!--<input type="text" onblur="if(this.value=='') this.value='Поиск по сайту';" onfocus="this.value='';" value="Поиск по сайту"></input>-->
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="Поиск по сайту" />
+                            </td>
+                            <td>
+                                <button class="headerButton">Поиск</button>
+                            </td>
+                            <!--<img border="0" src="images/lupa.jpg" style="position:absolute;top:2px; left:6px;">-->
+                        <!--<a>Поиск</a>-->
+                        </tr>
+                    </table>
+                </form>
+            <!--</div>-->
+        </div>
+        <div id="bottomHeaderPanel">
+            <div id="logo">
+                <p class="slogan">Инструмент путешественника</p>
+            </div>
+            <div id="quote">
+                <p class="headerQuoteL1">Самое длинное путешествие</p>
+                <p class="headerQuoteL2">начинается с одного</p>
+                <p class="headerQuoteL3">неверного шага</p>
+            </div>
+            <div id="headerDate">
+
+            </div>
+        </div>
+        <div id="headerBanner">
+            
+        </div>
     </header>
+    <nav id="mainNav">
+    <h1 class="hidden">Разделы сайта</h1>
+    </nav>
+    <section>
+    <h1>Табло рейсов</h1>
+    </section>
     <div id="main" role="main">
 
     </div>

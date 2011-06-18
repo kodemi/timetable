@@ -147,7 +147,119 @@ button {  width: auto; overflow: visible; }
 /**
  * You might tweak these..
  */
+#container {
+    padding: 0 20px;
+    max-width: 1024px;
+    min-width: 920px;
+    margin: 0 auto;
+}
 
+.hidden {
+    position : absolute;
+    left: -3000em;
+}
+
+header#mainHeader {
+    /*background: url(../img/logo.jpg) no-repeat;*/
+    /*background-position: 10px 80px;*/
+    /*margin-top: 50px;*/
+	/*padding: 0 10px;*/
+	/*position: relative;*/
+    height: 150px;
+	border-bottom: 2px solid #7f7f7f;
+	margin-bottom: 1em;
+
+}
+
+#topHeaderPanel {
+    /*background-color: gray;*/
+    background:url("../img/headerbg2.jpg") repeat-x;
+    padding: 10px;
+    /*position: absolute;*/
+    height: 30px;
+}
+
+#bottomHeaderPanel {
+    width: 100%;
+    position: relative;
+}
+
+#login {
+    float : left;
+}
+
+#search_box {
+    /*display: inline;*/
+    float: right;
+    position: relative;
+    /*right: 10px;*/
+    /*margin: 10px;*/
+    /*margin: auto;*/
+}
+
+#search_box td {
+    padding : 3px;
+}
+
+.headerButton {
+    background:#002341;
+    border:1px solid #002341;
+    color:#fff;
+    height: 24px;
+}
+
+#logo {
+    float: left;
+    min-width: 400px;
+    background: url(../img/logo.jpg) no-repeat;
+    /*background-position: 10px 80px;*/
+    height: 80px;
+    width: 40%;
+    position: relative;
+
+}
+
+.slogan {
+    position: absolute;
+    bottom: 10px;
+    font-style: italic;
+}
+
+#quote {
+    float : left;
+    /*min-width: 150px;*/
+    padding: 0 2em;
+    /*position: relative;*/
+    margin-top: 10px;
+    width: 20%;
+}
+
+.headerQuoteL1 {
+    margin-left: 0;
+}
+
+.headerQuoteL2 {
+    margin-left: -1em;
+}
+
+.headerQuoteL3 {
+    margin-left: -2em;
+}
+
+#headerDate {
+    margin-top: 10px;
+    float: right;
+    height: 40px;
+    width : 30%;
+    background: #dcdcdc;
+}
+
+#headerBanner {
+    width : 100%;
+    height: 80px;
+    background: #dcdcdc;
+    float: left;
+}
 body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
   color: #444;
