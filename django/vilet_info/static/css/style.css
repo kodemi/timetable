@@ -188,7 +188,7 @@ header#mainHeader {
     float : left;
 }
 
-#search_box {
+#searchBox {
     /*display: inline;*/
     float: right;
     position: relative;
@@ -197,13 +197,15 @@ header#mainHeader {
     /*margin: auto;*/
 }
 
-#search_box td {
-    padding : 3px;
+#searchBox input {
+    height: 20px;
+    width: 200px;
 }
-
 .headerButton {
     background:#002341;
-    border:1px solid #002341;
+    border: 0 solid black;
+    margin : 1px;
+    /*border:  0;*/
     color:#fff;
     height: 24px;
 }
@@ -259,6 +261,48 @@ header#mainHeader {
     height: 80px;
     background: #dcdcdc;
     float: left;
+}
+
+
+#mainMenu li {
+    background: #87cefa;
+height:32px;
+margin-bottom:8px;
+/*padding:9px 0 0 5px;*/
+    width: 195px;
+    text-align: center;
+    position: relative;
+}
+
+#mainMenu a {
+    /*text-align: center;*/
+    text-decoration: none;
+
+}
+
+#mainNav {
+    float: left;
+    margin: 10px 0;
+}
+
+#clocks {
+    height: 100px;
+    width: 600px;
+    background: #dcdcdc;
+    float: left;
+    /*margin: 0 20px;*/
+}
+
+#timetableContainer {
+    /*position: relative;*/
+    float: left;
+
+}
+
+#centerSection {
+    margin: 10px;
+    float: left;
+    width: 600px;
 }
 body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */

@@ -130,7 +130,7 @@ $(document).ready(function() {
             { "fnRender": function(oObj){ return datetime_templ_func(oObj) }, bVisible: false, sType: "date" }
         ],
         "aoColumnDefs": [{
-            "sClass": "center artica",
+//            "sClass": "center artica",
             "aTargets": ["_all"]
         }],
         "oLanguage": {

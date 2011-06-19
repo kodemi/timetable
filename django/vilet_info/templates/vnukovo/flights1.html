@@ -25,6 +25,7 @@
 
   <!-- CSS: implied media="all" -->
   <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?v=2">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/datatable.css"/>
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
@@ -47,20 +48,10 @@
                 </form>
             <!--</div>-->
             <!--<div id="search">-->
-                <form id="search_box" method="post">
+                <form id="searchBox" method="post">
                     <!--<input type="text" onblur="if(this.value=='') this.value='Поиск по сайту';" onfocus="this.value='';" value="Поиск по сайту"></input>-->
-                    <table>
-                        <tr>
-                            <td>
-                                <input type="text" placeholder="Поиск по сайту" />
-                            </td>
-                            <td>
-                                <button class="headerButton">Поиск</button>
-                            </td>
-                            <!--<img border="0" src="images/lupa.jpg" style="position:absolute;top:2px; left:6px;">-->
-                        <!--<a>Поиск</a>-->
-                        </tr>
-                    </table>
+                    <input type="text" placeholder="Поиск по сайту" />
+                    <button class="headerButton">Поиск</button>
                 </form>
             <!--</div>-->
         </div>
@@ -82,10 +73,39 @@
         </div>
     </header>
     <nav id="mainNav">
-    <h1 class="hidden">Разделы сайта</h1>
+        <h1 class="hidden">Разделы сайта</h1>
+        <ul id="mainMenu">
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Аэропорты</a></li>
+            <li><a href="#">Аэрокомпании</a></li>
+            <li><a href="#">Заметки бывалых</a></li>
+            <li><a href="#">Юридическая помощь путешественникам</a></li>
+            <li><a href="#">Терминологический словарь</a></li>
+            <li><a href="#">Разное</a></li>
+        </ul>
     </nav>
-    <section>
-    <h1>Табло рейсов</h1>
+    <section id="centerSection">
+    <h1 class="hidden">Табло рейсов</h1>
+        <div id="clocks">
+            
+        </div>
+        <div id="timetableContainer">
+            <table id="timetable" class="display">
+                <thead>
+                    <tr>
+                        <th>Рейс</th>
+                        <th>Авиакомпания</th>
+                        <th>Вылет</th>
+                        <th>Прилет</th>
+                        <th>Статус</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </section>
     <div id="main" role="main">
 
@@ -104,8 +124,14 @@
 
 
   <!-- scripts concatenated and minified via ant build script-->
+  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery-ui-1.8.12.custom.min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery.ui.datepicker-ru.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/underscore.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/dataTables.fnReloadAjax.js"></script>
   <script src="{{ STATIC_URL }}js/plugins.js"></script>
   <script src="{{ STATIC_URL }}js/script.js"></script>
+
   <!-- end scripts-->
 
 
