@@ -24,8 +24,9 @@
 
 
   <!-- CSS: implied media="all" -->
-  <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?v=2">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
   <link rel="stylesheet" href="{{ STATIC_URL }}css/datatable.css"/>
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/smoothness/jquery-ui-1.8.12.custom.css"/>
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
@@ -41,19 +42,14 @@
     <header id="mainHeader">
         <h1 class="hidden">vilet.info - инструмент путешественника</h1>
         <div id="topHeaderPanel">
-            <!--<div id="login">-->
                 <form id="login" method="">
-                    <button class="headerButton">Войти в личный кабинет</button>
-                    <button class="headerButton">Регистрация</button>
+                    <button type="button" class="headerButton">Войти в личный кабинет</button>
+                    <button type="button" class="headerButton">Регистрация</button>
                 </form>
-            <!--</div>-->
-            <!--<div id="search">-->
-                <form id="searchBox" method="post">
-                    <!--<input type="text" onblur="if(this.value=='') this.value='Поиск по сайту';" onfocus="this.value='';" value="Поиск по сайту"></input>-->
+                <form id="searchSiteBox" method="post">
                     <input type="text" placeholder="Поиск по сайту" />
-                    <button class="headerButton">Поиск</button>
+                    <button type="button" class="headerButton" ">Поиск</button>
                 </form>
-            <!--</div>-->
         </div>
         <div id="bottomHeaderPanel">
             <div id="logo">
@@ -72,44 +68,68 @@
             
         </div>
     </header>
-    <nav id="mainNav">
-        <h1 class="hidden">Разделы сайта</h1>
-        <ul id="mainMenu">
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Аэропорты</a></li>
-            <li><a href="#">Аэрокомпании</a></li>
-            <li><a href="#">Заметки бывалых</a></li>
-            <li><a href="#">Юридическая помощь путешественникам</a></li>
-            <li><a href="#">Терминологический словарь</a></li>
-            <li><a href="#">Разное</a></li>
-        </ul>
-    </nav>
-    <section id="centerSection">
-    <h1 class="hidden">Табло рейсов</h1>
-        <div id="clocks">
-            
+
+    <section id="middle">
+        <div id="middleContainer">
+            <div id="content">
+                <h1 class="hidden">Табло рейсов</h1>
+                <div id="clocks">
+
+                </div>
+                <div id="searchFlightBox">
+                    <form>
+                        <div class="lineSearchFlightBox">
+                            <label for="flight">Рейс:</label>
+                            <input type="text" name="flight">
+                            <label for="flight_from">Откуда:</label>
+                            <input type="text" name="flight_from">
+                        </div>
+                        <div class="lineSearchFlightBox">
+                            <label for="flight_date">Дата вылета:</label>
+                            <input type="text" name="flight_date">
+                            <label for="flight_to">Куда:</label>
+                            <input type="text" name="flight_to">
+                        </div>
+                        <button type="button" id="searchFlightBtn">Показать расписание</button>
+                    </form>
+                </div>
+                <div id="timetableContainer">
+                    <table id="timetable" class="display">
+                        <thead>
+                            <tr>
+                                <th>Рейс</th>
+                                <th>Авиакомпания</th>
+                                <th>Вылет</th>
+                                <th>Прилет</th>
+                                <th>Статус</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div id="timetableContainer">
-            <table id="timetable" class="display">
-                <thead>
-                    <tr>
-                        <th>Рейс</th>
-                        <th>Авиакомпания</th>
-                        <th>Вылет</th>
-                        <th>Прилет</th>
-                        <th>Статус</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+        <nav id="mainNav">
+            <h1 class="hidden">Разделы сайта</h1>
+            <ul id="mainMenu">
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Аэропорты</a></li>
+                <li><a href="#">Аэрокомпании</a></li>
+                <li><a href="#">Заметки бывалых</a></li>
+                <li><a href="#">Юридическая помощь путешественникам</a></li>
+                <li><a href="#">Терминологический словарь</a></li>
+                <li><a href="#">Разное</a></li>
+            </ul>
+        </nav>
+        <div id="rightSideBar">
+            <strong>Right Sidebar:</strong> Integer velit. Vestibulum nisi nunc, accumsan ut, vehicula sit amet, porta a, mi. Nam nisl tellus, placerat eget, posuere eget, egestas eget, dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In elementum urna a eros. Integer iaculis. Maecenas vel elit.
         </div>
     </section>
-    <div id="main" role="main">
 
-    </div>
+   
     <footer>
 
     </footer>

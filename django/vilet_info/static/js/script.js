@@ -35,7 +35,7 @@ $(document).ready(function() {
     }
 
     //var flight_date = new Date(2011, 3, 4);
-    var flight_datepicker = $("#flight_date").datepicker();
+    var flight_datepicker = $("input[name=flight_date]").datepicker();
     flight_datepicker.datepicker("setDate", "+0");
     var flight_date = flight_datepicker.datepicker("getDate");
     var dep_arr_templ = _.template("<b class='time'><% print((function(){" +
@@ -78,12 +78,12 @@ $(document).ready(function() {
             "})()); %>");
     var sms_templ = _.template('<a href=""><img border="0" src="static/images/smsicon.jpg"/></a>');
 
-    $("#show_timetable").live('click', function(){
+    $("#searchFlightBtn").live('click', function(){
         var flight, flight_from, flight_to, flight_filter;
         var flight_date = flight_datepicker.datepicker("getDate");
-        var flight_input = $("#flight")[0];
-        var flight_from_input = $("#flight_from")[0];
-        var flight_to_input = $("#flight_to")[0];
+        var flight_input = $("input[name=flight]")[0];
+        var flight_from_input = $("input[name=flight_from]")[0];
+        var flight_to_input = $("input[name=flight_to]")[0];
         if (flight_input.value == flight_input.defaultValue){
             flight = "flights"
         } else {
@@ -142,7 +142,7 @@ $(document).ready(function() {
         "sPaginationType": "full_numbers",
         //"bScrollCollapse": true,
         "bAutoWidth": false,
-        //"asStripClasses": ["artica", "center"],
+        "asStripClasses": ["artica", "centerTxt"],
         "bSort": true,
         "bFilter": false,
         "bInfo": false,
@@ -160,7 +160,7 @@ $(document).ready(function() {
             { "fnRender": function(oObj){ return datetime_templ_func(oObj) }, bVisible: false, sType: "date" }
         ],
         "aoColumnDefs": [{
-            "sClass": "center artica",
+            "sClass": "centerTxt artica",
             "aTargets": ["_all"]
         }],
         "oLanguage": {

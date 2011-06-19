@@ -148,10 +148,11 @@ button {  width: auto; overflow: visible; }
  * You might tweak these..
  */
 #container {
-    padding: 0 20px;
-    max-width: 1024px;
-    min-width: 920px;
-    margin: 0 auto;
+    width: 1000px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
 }
 
 .hidden {
@@ -165,9 +166,8 @@ header#mainHeader {
     /*margin-top: 50px;*/
 	/*padding: 0 10px;*/
 	/*position: relative;*/
-    height: 150px;
-	border-bottom: 2px solid #7f7f7f;
-	margin-bottom: 1em;
+    height: 250px;
+	/*border-bottom: 2px solid #7f7f7f;*/
 
 }
 
@@ -188,22 +188,22 @@ header#mainHeader {
     float : left;
 }
 
-#searchBox {
+#searchSiteBox {
     /*display: inline;*/
     float: right;
-    position: relative;
+    /*position: relative;*/
     /*right: 10px;*/
     /*margin: 10px;*/
     /*margin: auto;*/
 }
 
-#searchBox input {
+#searchSiteBox input {
     height: 20px;
     width: 200px;
 }
 .headerButton {
     background:#002341;
-    border: 0 solid black;
+    border: none;
     margin : 1px;
     /*border:  0;*/
     color:#fff;
@@ -261,13 +261,14 @@ header#mainHeader {
     height: 80px;
     background: #dcdcdc;
     float: left;
+    margin-bottom: 10px;
 }
 
 
 #mainMenu li {
     background: #87cefa;
-height:32px;
-margin-bottom:8px;
+    height:32px;
+    margin-bottom:8px;
 /*padding:9px 0 0 5px;*/
     width: 195px;
     text-align: center;
@@ -282,12 +283,15 @@ margin-bottom:8px;
 
 #mainNav {
     float: left;
-    margin: 10px 0;
+	width: 200px;
+	margin-left: -100%;
+	position: relative;
+
 }
 
 #clocks {
     height: 100px;
-    width: 600px;
+    width: 100%;
     background: #dcdcdc;
     float: left;
     /*margin: 0 20px;*/
@@ -299,11 +303,99 @@ margin-bottom:8px;
 
 }
 
-#centerSection {
-    margin: 10px;
-    float: left;
-    width: 600px;
+#middle {
+    width: 100%;
+	padding: 0 0 100px;
+	height: 1%;
+	position: relative;
 }
+
+#middle:after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
+#middleContainer {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+#content {
+	padding: 0 220px 0 220px;
+}
+
+
+.border {
+    border: 2px solid #000000;
+}
+
+label {
+	display:block;
+	/*margin: 1em 0 0;*/
+}
+
+/*input:focus {*/
+	/*border: 1px solid #952;*/
+/*}*/
+
+input[type="text"], input[type="email"],input[type="url"] {
+	width: 200px;
+	height: 20px;
+}
+
+#searchFlightBox {
+    float : left;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#searchFlightBox form {
+    width: 100%;
+    float: left;
+    background: #d3d3d3;
+    padding: 5px;
+}
+
+#searchFlightBtn {
+    background: #add8e6;
+    /*position: relative;*/
+    float: left;
+    height: 80px;
+    width: 90px;
+    border: none;
+    margin-top: 8px;
+    /*top: 50px;*/
+    
+    /*margin-left: 5px;*/
+    
+}
+.center {
+    margin: 0 auto;
+}
+.lineSearchFlightBox {
+    float : left;
+    padding: 3px 0;
+    margin-bottom: 3px;
+    margin-right: 5px;
+}
+
+.centerTxt {
+    text-align : center;
+    vertical-align : middle;
+}
+
+#rightSideBar {
+    float: left;
+	margin-right: -3px;
+	width: 200px;
+	margin-left: -200px;
+	position: relative;
+    background: #dcdcdc;
+}
+
 body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
   color: #444;
