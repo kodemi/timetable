@@ -264,6 +264,9 @@ header#mainHeader {
     margin-bottom: 10px;
 }
 
+#mainNav {
+    margin-bottom: 60px;
+}
 
 #mainMenu li {
     background: #87cefa;
@@ -281,7 +284,7 @@ header#mainHeader {
 
 }
 
-#mainNav {
+#leftSideBar {
     float: left;
 	width: 200px;
 	margin-left: -100%;
@@ -293,19 +296,22 @@ header#mainHeader {
     height: 100px;
     width: 100%;
     background: #dcdcdc;
-    float: left;
+    /*float: left;*/
     /*margin: 0 20px;*/
 }
 
 #timetableContainer {
     /*position: relative;*/
     float: left;
-
+    width: 100%;
+    margin: 10px 0;
+    border-bottom: 1px solid #d3d3d3;
 }
+
 
 #middle {
     width: 100%;
-	padding: 0 0 100px;
+	padding: 0 0 135px;
 	height: 1%;
 	position: relative;
 }
@@ -323,8 +329,10 @@ header#mainHeader {
 	float: left;
 	overflow: hidden;
 }
+
 #content {
 	padding: 0 220px 0 220px;
+    /*min-height: 800px;*/
 }
 
 
@@ -353,8 +361,9 @@ input[type="text"], input[type="email"],input[type="url"] {
 }
 
 #searchFlightBox form {
-    width: 100%;
+    width: 98%;
     float: left;
+    /*margin: 0, auto;*/
     background: #d3d3d3;
     padding: 5px;
 }
@@ -395,6 +404,54 @@ input[type="text"], input[type="email"],input[type="url"] {
 	position: relative;
     background: #dcdcdc;
 }
+
+#timetableDescription {
+    float : left;
+
+}
+#timetableDescription p {
+    text-align: justify;
+
+}
+
+#footer {
+	width: 1000px;
+	margin: -135px auto 0;
+	height: 135px;
+}
+
+#bottomBanner {
+    float : left;
+    width: 100%;
+    
+    height: 60px;
+    background: gray;
+    margin : 10px 0;
+}
+
+#footerNavDiv {
+    float : left;
+    background:url("../img/headerbg2.jpg") repeat-x;
+    width: 100%;
+    /*height: 100%;*/
+}
+#footer nav {
+    /*float: left;*/
+    /*background: green;*/
+    width: 700px;
+    height: 35px;
+    margin: 10px auto;
+    position: relative;
+    z-index : 10;
+
+}
+
+
+#footer li {
+    float : left;
+    margin: 0 10px;
+}
+
 
 body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */

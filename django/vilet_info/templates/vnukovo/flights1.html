@@ -72,6 +72,7 @@
     <section id="middle">
         <div id="middleContainer">
             <div id="content">
+
                 <h1 class="hidden">Табло рейсов</h1>
                 <div id="clocks">
 
@@ -110,31 +111,66 @@
                         </tbody>
                     </table>
                 </div>
+                <div id="timetableDescription">
+                    <p>
+                    Вы можете получать оперативную информацию о любом рейсе на мобильный телефон
+					или на электронную почту. Для подписки на услугу нажмите знак <img src="{{ STATIC_URL }}img/smsicon.jpg"/> интересующего вас рейса.
+					Если рейс еще не появился в табло, вы можете использовать услугу <a href="">предварительной подписки.</a>
+                    </p>
+                </div>
+
             </div>
         </div>
-        <nav id="mainNav">
-            <h1 class="hidden">Разделы сайта</h1>
-            <ul id="mainMenu">
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Аэропорты</a></li>
-                <li><a href="#">Аэрокомпании</a></li>
-                <li><a href="#">Заметки бывалых</a></li>
-                <li><a href="#">Юридическая помощь путешественникам</a></li>
-                <li><a href="#">Терминологический словарь</a></li>
-                <li><a href="#">Разное</a></li>
-            </ul>
-        </nav>
+        <div id="leftSideBar">
+            <nav id="mainNav">
+                <h1 class="hidden">Разделы сайта</h1>
+                <ul id="mainMenu">
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Аэропорты</a></li>
+                    <li><a href="#">Аэрокомпании</a></li>
+                    <li><a href="#">Заметки бывалых</a></li>
+                    <li><a href="#">Юридическая помощь путешественникам</a></li>
+                    <li><a href="#">Терминологический словарь</a></li>
+                    <li><a href="#">Разное</a></li>
+                </ul>
+            </nav>
+            <section id="fotogallery">
+                <h1>Фотогалерея</h1>
+            </section>
+        </div>
+        
         <div id="rightSideBar">
             <strong>Right Sidebar:</strong> Integer velit. Vestibulum nisi nunc, accumsan ut, vehicula sit amet, porta a, mi. Nam nisl tellus, placerat eget, posuere eget, egestas eget, dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In elementum urna a eros. Integer iaculis. Maecenas vel elit.
         </div>
     </section>
 
    
-    <footer>
+
+  </div> <!--! end of #container -->
+<footer id="footer">
+        <div id="bottomBanner">
+
+        </div>
+        <div id="footerNavDiv">
+            <nav id="footerNav">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Табло рейсов</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Аэропорты</a></li>
+                    <li><a href="#">Авиакомпании</a></li>
+                    <li><a href="#">Заметки бывалых</a></li>
+                    <li><a href="#">Юридическая помощь пассажирам</a></li>
+                    <li><a href="#">Терминологический словарь</a></li>
+                    <li><a href="#">Фотогаллерея</a></li>
+                    <li><a href="#">Контактная информация</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    <!--<strong>Right Sidebar:</strong> Integer velit. Vestibulum nisi nunc, accumsan ut, vehicula sit amet, porta a, mi. Nam nisl tellus, placerat eget, posuere eget, egestas eget, dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In elementum urna a eros. Integer iaculis. Maecenas vel elit.-->
 
     </footer>
-  </div> <!--! end of #container -->
-
 
   <!-- JavaScript at the bottom for fast page loading -->
 
@@ -147,7 +183,7 @@
   <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery-ui-1.8.12.custom.min.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery.ui.datepicker-ru.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/libs/underscore.js"></script>
-  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery.dataTables.min.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/libs/dataTables.fnReloadAjax.js"></script>
   <script src="{{ STATIC_URL }}js/plugins.js"></script>
   <script src="{{ STATIC_URL }}js/script.js"></script>

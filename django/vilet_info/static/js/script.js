@@ -152,7 +152,7 @@ $(document).ready(function() {
         "bSortClasses": false,
         "aoColumns": [
             { "mDataProp": "flight", "sWidth": "6%", "bSortable": false }, // номер рейса
-            { "mDataProp": "airline", "bSortable": false }, // авиакомпания
+            { "mDataProp": "airline", "sWidth":"19%", "bSortable": false }, // авиакомпания
             { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 1) }, "sWidth": "30%", "bSortable": false}, // вылет
             { "fnRender": function(oObj){ return dep_arr_templ_func(oObj, 0) }, "sWidth": "30%", "bSortable": false}, // прилет
             { "fnRender": function(oObj){ return  status_templ_func(oObj) }, "sWidth": "10%", "bSortable": false}, // статус
