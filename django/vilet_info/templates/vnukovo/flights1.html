@@ -78,7 +78,7 @@
 
                 </div>
                 <div id="searchFlightBox">
-                    <form>
+                    <form class="button">
                         <div class="lineSearchFlightBox">
                             <label for="flight">Рейс:</label>
                             <input type="text" name="flight">
@@ -91,7 +91,11 @@
                             <label for="flight_to">Куда:</label>
                             <input type="text" name="flight_to">
                         </div>
-                        <button type="button" id="searchFlightBtn">Показать расписание</button>
+                        <!--<div id="searchBtnContainer">-->
+                        <span class="blue search button">
+                        <span id="searchFlightBtn" class="magni"></span>
+                        </span>
+                        <!--</div>-->
                     </form>
                 </div>
                 <div id="timetableContainer">
@@ -125,13 +129,13 @@
             <nav id="mainNav">
                 <h1 class="hidden">Разделы сайта</h1>
                 <ul id="mainMenu">
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Аэропорты</a></li>
-                    <li><a href="#">Аэрокомпании</a></li>
-                    <li><a href="#">Заметки бывалых</a></li>
-                    <li><a href="#">Юридическая помощь путешественникам</a></li>
-                    <li><a href="#">Терминологический словарь</a></li>
-                    <li><a href="#">Разное</a></li>
+                    <li><a class="menu blue2 button" href="#">Новости</a></li>
+                    <li><a class="menu  blue3 button" href="#">Аэропорты</a></li>
+                    <li><a class="menu blue button" href="#">Авиакомпании</a></li>
+                    <li><a class="menu orange button" href="#">Заметки бывалых</a></li>
+                    <li><a class="menu green button" href="#">Юридическая помощь путешественникам</a></li>
+                    <li><a class="menu blue button" href="#">Терминологический словарь</a></li>
+                    <li><a class="menu blue3 button" href="#">Разное</a></li>
                 </ul>
             </nav>
             <section id="fotogallery">

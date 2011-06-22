@@ -22,10 +22,10 @@ $.fn.hAlign = function() {
 	});
 };
 })(jQuery);
-$(document).ready(function() {
-	$("#mainMenu a").vAlign();
-	$("#mainMenu a").hAlign();
-});
+//$(document).ready(function() {
+//	$("#mainMenu a").vAlign();
+//	$("#mainMenu a").hAlign();
+//});
 
 
 $(document).ready(function() {
