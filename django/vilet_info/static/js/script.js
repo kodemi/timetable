@@ -26,7 +26,11 @@ $.fn.hAlign = function() {
 //	$("#mainMenu a").vAlign();
 //	$("#mainMenu a").hAlign();
 //});
-
+$(document).ready(function(){
+    $('.notImplemented').live('click', function(){
+        apprise("Данный раздел в разработке.")
+    })
+});
 
 $(document).ready(function() {
 
@@ -142,7 +146,7 @@ $(document).ready(function() {
         "sPaginationType": "full_numbers",
         //"bScrollCollapse": true,
         "bAutoWidth": false,
-        "asStripClasses": ["artica", "centerTxt"],
+        "asStripClasses": ["odd", "even", "artica", "centerTxt"],
         "bSort": true,
         "bFilter": false,
         "bInfo": false,

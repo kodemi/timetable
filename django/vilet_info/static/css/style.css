@@ -305,10 +305,21 @@ header#mainHeader {
 #clocks {
     height: 100px;
     width: 100%;
-    background: #dcdcdc;
     /*float: left;*/
+    outline: 2px #000000 solid;
     /*margin: 0 20px;*/
 }
+
+#clocks div {
+    float: left;
+}
+
+#clocks p {
+    font-weight: bold;
+    text-align: center;
+}
+
+
 
 #timetableContainer {
     /*position: relative;*/

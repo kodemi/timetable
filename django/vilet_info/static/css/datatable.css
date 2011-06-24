@@ -43,6 +43,12 @@
 	/*cursor: pointer;*/
 	/** cursor: hand;*/
 /*}*/
+.paging_full_numbers {
+	/*padding: 2px 6px;*/
+	margin: 10px 0;
+	cursor: pointer;
+	* cursor: hand;
+}
 
 /*.dataTables_paginate .ui-button {*/
 	/*margin-right: -0.1em !important;*/
@@ -279,7 +285,7 @@ table.display tr.even.gradeU {
 
 
 tr.odd {
-	background-color: #E2E4FF;
+	background-color: #cbeafb;
 }
 
 tr.even {

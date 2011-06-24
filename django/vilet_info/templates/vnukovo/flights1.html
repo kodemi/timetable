@@ -26,6 +26,7 @@
   <!-- CSS: implied media="all" -->
   <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
   <link rel="stylesheet" href="{{ STATIC_URL }}css/datatable.css"/>
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/apprise.min.css"/>
   <link rel="stylesheet" href="{{ STATIC_URL }}css/smoothness/jquery-ui-1.8.12.custom.css"/>
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
@@ -43,12 +44,12 @@
         <h1 class="hidden">vilet.info - инструмент путешественника</h1>
         <div id="topHeaderPanel">
                 <form id="login" method="">
-                    <button type="button" class="headerButton">Войти в личный кабинет</button>
-                    <button type="button" class="headerButton">Регистрация</button>
+                    <button type="button" class="notImplemented headerButton">Войти в личный кабинет</button>
+                    <button type="button" class="notImplemented headerButton">Регистрация</button>
                 </form>
                 <form id="searchSiteBox" method="post">
                     <input type="text" placeholder="Поиск по сайту" />
-                    <button type="button" class="headerButton" ">Поиск</button>
+                    <button type="button" class=" notImplemented headerButton" ">Поиск</button>
                 </form>
         </div>
         <div id="bottomHeaderPanel">
@@ -75,7 +76,14 @@
 
                 <h1 class="hidden">Табло рейсов</h1>
                 <div id="clocks">
-
+                    <div id="MoscowClk">
+                        <p>Москва</p>
+                        <canvas id="clockMos" class="CoolClock:classic:40:noSeconds:"></canvas>
+                    </div>
+                    <div id="CityClk">
+                        <p>.</p>
+                        <canvas id="clockCity" class="CoolClock:classic:40:noSeconds:"></canvas>
+                    </div>
                 </div>
                 <div id="searchFlightBox">
                     <form class="button">
@@ -129,13 +137,13 @@
             <nav id="mainNav">
                 <h1 class="hidden">Разделы сайта</h1>
                 <ul id="mainMenu">
-                    <li><a class="menu blue2 button" href="#">Новости</a></li>
-                    <li><a class="menu  blue3 button" href="#">Аэропорты</a></li>
-                    <li><a class="menu blue button" href="#">Авиакомпании</a></li>
-                    <li><a class="menu orange button" href="#">Заметки бывалых</a></li>
-                    <li><a class="menu green button" href="#">Юридическая помощь путешественникам</a></li>
-                    <li><a class="menu blue button" href="#">Терминологический словарь</a></li>
-                    <li><a class="menu blue3 button" href="#">Разное</a></li>
+                    <li><a class="notImplemented menu blue2 button" href="#">Новости</a></li>
+                    <li><a class="notImplemented menu  blue3 button" href="#">Аэропорты</a></li>
+                    <li><a class="notImplemented menu blue button" href="#">Авиакомпании</a></li>
+                    <li><a class="notImplemented menu orange button" href="#">Заметки бывалых</a></li>
+                    <li><a class="notImplemented menu green button" href="#">Юридическая помощь путешественникам</a></li>
+                    <li><a class="notImplemented menu blue button" href="#">Терминологический словарь</a></li>
+                    <li><a class="notImplemented menu blue3 button" href="#">Разное</a></li>
                 </ul>
             </nav>
             <section id="fotogallery">
@@ -189,6 +197,10 @@
   <script type="text/javascript" src="{{ STATIC_URL }}js/libs/underscore.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/libs/jquery.dataTables.min.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/libs/dataTables.fnReloadAjax.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/apprise-1.5.min.js"></script>
+  <!--[if IE]><script type="text/javascript" src="{{ STATIC_URL }}js/libs/excanvas.js"></script><![endif]-->
+  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/coolclock.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/moreskins.js"></script>
   <script src="{{ STATIC_URL }}js/plugins.js"></script>
   <script src="{{ STATIC_URL }}js/script.js"></script>
 
