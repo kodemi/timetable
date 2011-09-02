@@ -1,3 +1,4 @@
+{% load cms_tags sekizai_tags %}
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
@@ -34,7 +35,7 @@
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="{{ STATIC_URL }}js/libs/modernizr-1.7.min.js"></script>
-
+  {% render_block 'css' %}
 </head>
 
 <body>
@@ -203,6 +204,7 @@
   <script type="text/javascript" src="{{ STATIC_URL }}js/libs/moreskins.js"></script>
   <script src="{{ STATIC_URL }}js/plugins.js"></script>
   <script src="{{ STATIC_URL }}js/script.js"></script>
+  {% render_block 'js' %}
 
   <!-- end scripts-->
 

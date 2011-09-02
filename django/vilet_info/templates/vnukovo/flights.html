@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load cms_tags sekizai_tags %}
 <html>
     <head>
         <link href="{{ STATIC_URL }}css/maincss.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -12,8 +13,11 @@
         <script type="text/javascript" src="{{ STATIC_URL }}javascript/jquery.dataTables.js"></script>
         <script type="text/javascript" src="{{ STATIC_URL }}javascript/dataTables.fnReloadAjax.js"></script>
         <script type="text/javascript" src="{{ STATIC_URL }}javascript/app.js"></script>
+    {% render_block 'css' %}
+    {% render_block 'js' %}
     </head>
     <body>
+    {% cms_toolbar %}
     <div class="allwrap">
     <div class="header">
         <div class="wrap">
