@@ -132,7 +132,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.markup',
     'django.contrib.staticfiles',
-    'vnukovo',
+    'airports',
     'api',
     'south',
 )
