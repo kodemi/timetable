@@ -5,6 +5,8 @@
 #
 #     http://doc.scrapy.org/topics/settings.html
 #
+import os
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 BOT_NAME = 'timetable'
 BOT_VERSION = '1.0'
@@ -23,3 +25,10 @@ DATABASE_USER = ''
 DATABASE_PASSWORD = ''
 
 API_BASE_URL = 'http://localhost:8000/api'
+SELECTORS_BACKEND = 'lxml' 
+LOG_FILE = os.path.join(PROJECT_DIR, 'log.log')
+LOG_LEVEL = 'WARNING'
+
+RETRY_ENABLES = True
+RETRY_TIMES = 3
+

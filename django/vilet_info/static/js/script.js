@@ -37,9 +37,22 @@ $(document).ready(function() {
     function addZero(i) {
         return (i < 10)? "0" + i: i;
     }
-
+    
     //var flight_date = new Date(2011, 3, 4);
-    var flight_datepicker = $("input[name=flight_date]").datepicker();
+    var flight_datepicker = $("input[name=flight_date]").datepicker({
+        showOn: 'button',
+        buttonImage: '/static/img/calendar.png',
+        buttonImageOnly: true,
+        dateFormat: 'dd.mm.yy',
+        onClose: function(dateText, inst)
+        {
+            $(this).attr("disabled", false);
+        },
+        beforeShow: function(input, inst)
+        {
+            $(this).attr("disabled", true);
+        }
+    });
     flight_datepicker.datepicker("setDate", "+0");
     var flight_date = flight_datepicker.datepicker("getDate");
     var dep_arr_templ = _.template("<b class='time'><% print((function(){" +
@@ -64,7 +77,7 @@ $(document).ready(function() {
             "})()); %>");
 
     var status_templ = _.template("<span class='<% print((function(){" +
-            "if (status == 'прилетел'){" +
+            "if (status == 'прилетел' || status == 'вылетел'){" +
             "   return 'status4'" +
             "} else if (status == 'не вылетел' || status == 'отменен'){" +
             "   return 'status2'" +
@@ -138,22 +151,24 @@ $(document).ready(function() {
     };
 
     var dataTable = $('#timetable').dataTable( {
-        "bProcessing": true,
+        "bProcessing": false,
         "bPaginate": true,
-        //"sScrollY": "350px",
+        "sScrollY": "400px",
         "iDisplayLength": 6,
         "bLengthChange": false,
         "sPaginationType": "full_numbers",
         //"bScrollCollapse": true,
         "bAutoWidth": false,
-        "asStripClasses": ["odd", "even", "artica", "centerTxt"],
+        "asStripClasses": ["odd", "even"],
         "bSort": true,
         "bFilter": false,
         "bInfo": false,
-		"sAjaxSource": null,
+        "bScrollCollapse": false,
+		"sAjaxSource": "/api/flights/recent.json",
         "sAjaxDataProp": "",
         "aaSorting": [[6,"asc"]],
         "bSortClasses": false,
+//        "sDom": "lfrtip",
         "aoColumns": [
             { "mDataProp": "flight", "sWidth": "6%", "bSortable": false }, // номер рейса
             { "mDataProp": "airline", "sWidth":"19%", "bSortable": false }, // авиакомпания
@@ -164,7 +179,7 @@ $(document).ready(function() {
             { "fnRender": function(oObj){ return datetime_templ_func(oObj) }, bVisible: false, sType: "date" }
         ],
         "aoColumnDefs": [{
-            "sClass": "centerTxt artica",
+            "sClass": "centerTxt",
             "aTargets": ["_all"]
         }],
         "oLanguage": {

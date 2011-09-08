@@ -7,7 +7,7 @@ from scrapy import log
 from scrapy.conf import settings
 from scrapy.contrib.exporter import BaseItemExporter
 from twisted.enterprise import adbapi
-import MySQLdb.cursors
+#import MySQLdb.cursors
 from restful_lib import Connection
 import json
 
@@ -95,19 +95,19 @@ class RestPipeline(object):
         self.conn = Connection(base_url)
 
     def process_item(self, item, spider):
-        data = dict(item.items())
-        for k in data:
+        data = dict((key, u'') for key in item.fields)
+        for field in ('datetime_scheduled', 'datetime_estimated', 'datetime_actual'):
+            data[field] = None
+        for k in item:
             if k in ('datetime_scheduled', 'datetime_estimated', 'datetime_actual'):
-                if data[k]:
-                    data[k] = data[k].isoformat(' ')
-                else:
-                    data[k] = None
+                data[k] = item[k] and item[k].isoformat(' ') or None
             elif k == 'flight_type':
-                continue
+                data[k] = item[k]
             else:
-                data[k] = data[k].encode('utf-8')
+                data[k] = item[k].encode('utf-8')
         data = json.dumps(data)
         resp = self.conn.request_post("/flights", args={'data': data})
-        #log.msg('Response: %s' % resp, level=log.DEBUG)
+        if resp['headers']['status'] != '200':
+            log.msg('Response: %s\nJsonData: %s\nItemData: %s\n' % (resp, data, item), level=log.ERROR)
         return item
 

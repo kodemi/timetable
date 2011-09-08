@@ -59,9 +59,10 @@ class SvoSpider(BaseSpider):
     def parse_url_contents(self, response):
         hxs = HtmlXPathSelector(response)
         flight_route = hxs.select('//div[@class="content"]/table/tr[5]/td[2]/text()').extract()[0]
-        departure, arrival = flight_route.split(u'\u2192')
+        routes = flight_route.split(u'\u2192')
+        departure, arrival = routes[0], routes[-1]
         item = response.request.meta['item']
         #print departure, re.findall(r'[^\(\)]+', departure, re.U)
-        item['city_of_departure'], item['airport_of_departure'] = [x.strip() for x in re.findall(r'[^\(\)]+', departure.strip(), re.U)]
-        item['city_of_arrival'], item['airport_of_arrival'] = [x.strip() for x in re.findall(r'[^\(\)]+', arrival.strip(), re.U)]
+        item['city_of_departure'], item['airport_of_departure'] = [x.strip() for x in re.findall(r'[^\(\)]+', departure.strip(), re.U)[:2]]
+        item['city_of_arrival'], item['airport_of_arrival'] = [x.strip() for x in re.findall(r'[^\(\)]+', arrival.strip(), re.U)[:2]]
         yield item

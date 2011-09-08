@@ -6,10 +6,13 @@
 from scrapy.item import Item, Field
 from scrapy.contrib.loader.processor import Compose, Join
 from datetime import datetime
+from scrapy import log
 
 def to_datetime(value):
+    value = value.strip()
     if value == '-':
         return None
+    #log.msg('DATE: %s' % value, level=log.WARNING)
     try:
         date_list = value.split()
         if len(date_list) == 2:
@@ -25,7 +28,8 @@ def to_datetime(value):
         else:
             value = datetime.strptime(date_list[2], "%H:%M").replace(
                 year=datetime.now().year, month=datetime.now().month, day=int(date_list[0]))
-    except ValueError:
+    except ValueError as e:
+        log.msg('ValueError: %s' % e, level=log.ERROR)
         return None
     return value
 

@@ -6,9 +6,10 @@ from piston.utils import rc
 from django.core import serializers
 import json
 import datetime
+from dateutil.relativedelta import relativedelta
 import time
 
-from vnukovo.models import Flight
+from airports.models import Flight
 
 class FlightForm(forms.ModelForm):
     class Meta:
@@ -32,15 +33,19 @@ class FlightHandler(BaseHandler):
             except TypeError:
                 return rc.BAD_REQUEST
         if flight:
-            filter_dict['flight'] = flight
+            filter_dict['flight__iexact'] = flight
         if flight_date:
             filter_dict['datetime_scheduled__year'] = flight_date.year
             filter_dict['datetime_scheduled__month'] = flight_date.month
             filter_dict['datetime_scheduled__day'] = flight_date.day
         if ffrom and ffrom != 'all':
-            filter_dict['city_of_departure'] = ffrom.capitalize()
+            filter_dict['city_of_departure__iexact'] = ffrom
         if fto and fto != 'all':
-            filter_dict['city_of_arrival'] = fto.capitalize()
+            filter_dict['city_of_arrival__iexact'] = fto
+        if not filter_dict:
+            start_date = datetime.datetime.now() + relativedelta(minutes=-30)
+            end_date = datetime.datetime.now() + relativedelta(minutes=+30)
+            filter_dict['datetime_scheduled__range'] = (start_date, end_date)
         flights = base.filter(**filter_dict).values()
         for flight in flights:
             flight['datetime_scheduled'] = flight['datetime_scheduled'].strftime("%a %b %d %Y %X")
@@ -66,6 +71,8 @@ class FlightHandler(BaseHandler):
             attrs = json.loads(request.POST.get('data'))
         else:
             return rc.BAD_REQUEST
+#        for field in ('flight_status', 'comment', 'checkin_desk'):
+#            attrs[field] = attrs[field] or u''
         try:
             inst = self.model.objects.get(**attrs)
             print 'Duplicate entry: %s' % inst
@@ -84,7 +91,7 @@ class FlightHandler(BaseHandler):
                 return resp
             try:
                 exinst = self.model.objects.get(flight=attrs['flight'], datetime_scheduled=attrs['datetime_scheduled'])
-                exinst.flight_status = attrs['flight_status']
+                exinst.flight_status = attrs['flight_status'] or u''
                 exinst.datetime_estimated = attrs['datetime_estimated']
                 exinst.datetime_actual = attrs['datetime_actual']
                 exinst.save()

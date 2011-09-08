@@ -4,6 +4,7 @@ from scrapy.http import Request
 from timetable.items import TimetableItem
 from timetable.itemloaders import TimetableLoader
 import re
+from scrapy import log
 
 class DomodedovoSpider(BaseSpider):
     name = "domodedovo.ru"
@@ -52,17 +53,15 @@ class DomodedovoSpider(BaseSpider):
             if flight_route:
                 flight_route = flight_route.extract()[0]
                 break
-        flight_route = flight_route.split('-&gt;')
-        if len(flight_route) == 2:
-            departure, arrival = flight_route
-        else:
-            departure, arrival = flight_route[0], flight_route[-1]
+        flight_route = flight_route.split('->')
+        departure, arrival = flight_route[0], flight_route[-1]
         for direction in [(departure, 'departure'), (arrival, 'arrival')]:
-            city_airport = re.findall(r'(\w+)', direction[0], re.U)
-            if len(city_airport) == 2:
-                item['city_of_%s' % direction[1]], item['airport_of_%s' % direction[1]] = city_airport
+            city_airport = re.findall(r'(.+)\((.+)\)', direction[0], re.U)
+            #log.msg(u'|'.join(city_airport and city_airport[0] or [direction[0]]), level=log.WARNING)
+            if city_airport:
+                item['city_of_%s' % direction[1]], item['airport_of_%s' % direction[1]] = city_airport[0]
             else:
-                item['city_of_%s' % direction[1]] = city_airport[0]
+                item['city_of_%s' % direction[1]] = direction[0]
         airline = hxs.select('/html/body/table[1]/tr[3]/td/table[2]/tr[4]/td[2]//text()')
         if not airline:
             airline = hxs.select('/html/body/table[1]/tr/td/table[2]/tr[4]/td[2]//text()')

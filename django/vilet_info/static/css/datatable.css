@@ -285,7 +285,7 @@ table.display tr.even.gradeU {
 
 
 tr.odd {
-	background-color: #cbeafb;
+	background-color: #e9f1f5;
 }
 
 tr.even {
@@ -359,7 +359,8 @@ td.details {
 }
 
 .paging_full_numbers span.paginate_button {
-	background-color: #ddd;
+	/*background-color: #ddd;*/
+	background-color: #E9F1F5;
 }
 
 .paging_full_numbers span.paginate_button:hover {
