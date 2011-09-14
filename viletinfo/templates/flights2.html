@@ -1,0 +1,146 @@
+{% extends "base1.html" %}
+
+{% block base_content %}
+  <div id="container">
+    <header id="mainHeader">
+        <h1 class="hidden">vilet.info - инструмент путешественника</h1>
+        <div id="topHeaderPanel">
+                <form id="login" method="">
+                    <button type="button" class="notImplemented headerButton">Войти в личный кабинет</button>
+                    <button type="button" class="notImplemented headerButton">Регистрация</button>
+                </form>
+                <form id="searchSiteBox" method="post">
+                    <input type="text" placeholder="Поиск по сайту" />
+                    <button type="button" class=" notImplemented headerButton" ">Поиск</button>
+                </form>
+        </div>
+        <div id="bottomHeaderPanel">
+            <div id="logo">
+                <p class="slogan">Инструмент путешественника</p>
+            </div>
+            <div id="quote">
+                <p class="headerQuoteL1">Самое длинное путешествие</p>
+                <p class="headerQuoteL2">начинается с одного</p>
+                <p class="headerQuoteL3">неверного шага</p>
+            </div>
+            <div id="headerDate">
+
+            </div>
+        </div>
+        <div id="headerBanner">
+        </div>
+    </header>
+
+    <section id="middle">
+        <div id="middleContainer">
+            <div id="content">
+
+                <h1 class="hidden">Табло рейсов</h1>
+                <!--<div id="clocks">
+                    <div id="MoscowClk">
+                        <p>Москва</p>
+                        <canvas id="clockMos" class="CoolClock:classic:40:noSeconds:"></canvas>
+                    </div>
+                    <div id="CityClk">
+                        <p>.</p>
+                        <canvas id="clockCity" class="CoolClock:classic:40:noSeconds:"></canvas>
+                    </div>
+                </div>-->
+                <div id="searchFlightBox">
+                    <form>
+                        <div class="lineSearchFlightBox">
+                            <label for="flight">Рейс:</label>
+                            <input type="text" name="flight">
+                            <label for="flight_from">Откуда:</label>
+                            <input type="text" name="flight_from">
+                        </div>
+                        <div class="lineSearchFlightBox">
+                            <label for="flight_date">Дата вылета:</label>
+                            <input type="text" name="flight_date">
+                            <label for="flight_to">Куда:</label>
+                            <input type="text" name="flight_to">
+                        </div>
+                        <!--<div id="searchBtnContainer">-->
+                        <span class="blue search button">
+                        <span id="searchFlightBtn" class="magni"></span>
+                        </span>
+                        <!--</div>-->
+                    </form>
+                </div>
+                <div id="timetableContainer">
+                    <table id="timetable" class="display">
+                        <thead>
+                            <tr>
+                                <th>Рейс</th>
+                                <th>Авиакомпания</th>
+                                <th>Вылет</th>
+                                <th>Прилет</th>
+                                <th>Статус</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="timetableDescription">
+                    <p>
+                    Вы можете получать оперативную информацию о любом рейсе на мобильный телефон
+					или на электронную почту. Для подписки на услугу нажмите знак <img src="{{ STATIC_URL }}img/smsicon.jpg"/> интересующего вас рейса.
+					Если рейс еще не появился в табло, вы можете использовать услугу <a href="">предварительной подписки.</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div id="leftSideBar">
+            <nav id="mainNav">
+                <h1 class="hidden">Разделы сайта</h1>
+                <ul id="mainMenu">
+                    <li><a class="notImplemented menu blue2 button" href="#">Новости</a></li>
+                    <li><a class="notImplemented menu  blue3 button" href="#">Аэропорты</a></li>
+                    <li><a class="notImplemented menu blue button" href="#">Авиакомпании</a></li>
+                    <li><a class="notImplemented menu orange button" href="#">Заметки бывалых</a></li>
+                    <li><a class="notImplemented menu green button" href="#">Юридическая помощь путешественникам</a></li>
+                    <li><a class="notImplemented menu blue button" href="#">Терминологический словарь</a></li>
+                    <li><a class="notImplemented menu blue3 button" href="#">Разное</a></li>
+                </ul>
+            </nav>
+            <section id="fotogallery">
+                <h1>Фотогалерея</h1>
+            </section>
+        </div>
+        
+        <div id="rightSideBar">
+        </div>
+    </section>
+
+   
+
+  </div> <!--! end of #container -->
+<footer id="footer">
+        <div id="bottomBanner">
+        </div>
+        <div id="footerNavDiv">
+            <nav id="footerNav">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Табло рейсов</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Аэропорты</a></li>
+                    <li><a href="#">Авиакомпании</a></li>
+                    <li><a href="#">Заметки бывалых</a></li>
+                    <li><a href="#">Юридическая помощь пассажирам</a></li>
+                    <li><a href="#">Терминологический словарь</a></li>
+                    <li><a href="#">Фотогаллерея</a></li>
+                    <li><a href="#">Контактная информация</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    <!--<strong>Right Sidebar:</strong> Integer velit. Vestibulum nisi nunc, accumsan ut, vehicula sit amet, porta a, mi. Nam nisl tellus, placerat eget, posuere eget, egestas eget, dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In elementum urna a eros. Integer iaculis. Maecenas vel elit.-->
+
+</footer>
+
+{% endblock %}
