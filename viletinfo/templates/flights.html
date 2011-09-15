@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+{% load cms_tags sekizai_tags %}
+<html>
+    <head>
+        <link href="{{ STATIC_URL }}css/maincss.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/datatable.css"/>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/smoothness/jquery-ui-1.8.12.custom.css"/>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}javascript/jquery-ui-1.8.12.custom.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}javascript/jquery.ui.datepicker-ru.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}javascript/underscore.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}javascript/backbone.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}javascript/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}javascript/dataTables.fnReloadAjax.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}javascript/app.js"></script>
+    {% render_block 'css' %}
+    {% render_block 'js' %}
+    </head>
+    <body>
+    {% cms_toolbar %}
+    <div class="allwrap">
+    <div class="header">
+        <div class="wrap">
+            <form style="width:277px;display:inline;" method="">
+                <button class="header_button" style="margin-right:20px;">
+                    <a class="ba">Войти в личный кабинет</a>
+                </button>
+                <button class="header_button reg_button" style="margin-right:20px;">
+                    <a class="ba">Регистрация</a>
+                </button>
+            </form>
+            <div style="float:right;">
+                <form method="">
+                    <input type="text" onblur="if(this.value=='') this.value='Поиск по сайту';" onfocus="this.value='';" value="Поиск по сайту"></input>
+                    <button type="submit" class="header_button search_button">
+                        <img border="0" src="images/lupa.jpg" style="position:absolute;top:2px; left:6px;">
+                        <a class="ba">Поиск</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+    <div class="vertic allcontent">
+        <div class="vertic" style="width:40%;min-width:408px;">
+            <a href=""><img class="logoimg" border="0" src="{{ STATIC_URL }}images/logo.jpg"></a><br>
+            <span class="deviz">Инструмент путешественника</span>
+        </div>
+
+        <div class="vertic slogan" style="color:#ee1f52;">
+            <div class="cntr" style="width:235px;">
+					<span class="slog1">
+						Самое длинное путешествие<br>
+					</span>
+					<span class="slog2">
+						начинается с одного<br>
+					</span>
+					<span class="slog3">
+						неверного шага<br>
+					</span>
+            </div>
+        </div>
+
+        <div class="vertic slogan_right">
+					<span class="slog1 slog_right">
+						<span style="color:#333333;">Cегодня:</span>&nbsp;<span class="slog_right" style="color:#ee1f52;">15 апреля 2011 г. пятница</span><br>
+					</span>
+					<span class="slog2 slog_right">
+						В&nbsp;<a class="artica" href="">Москве</a>
+						<a href=""><img class="pcheck" border="0" src="{{ STATIC_URL }}images/pcheck.jpg"></a>
+						<span style="color:#ee1f52;font-size:20px ;">15:25:00</span><br>
+					</span>
+					<span class="slog3 slog_right">
+					<a class="artica" href="">Курсы валют</a>
+					</span>
+            &nbsp;
+					<span class="slog3 slog_right">
+					<a class="artica" href="">Календарь</a>
+					</span>
+			</div>
+		</div>
+		<div class="vertic big_banner">
+		<div class="vertic fullwidth ban_placeholder"></div>
+		</div>
+		<div class="vertic allcontent fullwidth">
+		<div class="vertic collon double">
+			<div class="vertic fullwidth menu">
+				<div class="vertic fullwidth">
+					<a href="" class="menubutton1">Новости</a>
+					<a href="" class="menubutton2">Аэропорты</a>
+					<a href="" class="menubutton3">Аэрокомпании</a>
+					<a href="" class="menubutton4">Заметки бывалых</a>
+					<a href="" class="menubutton5">Юридическая помощь<br>путешественникам</a>
+					<a href="" class="menubutton6">Терминологический словарь</a>
+					<a href="" class="menubutton7">Разное</a>
+				</div>
+			</div>
+			<div class="vertic fullwidth photogallery">
+				<div class="vertic fullwidth">
+					<a href="" class="phgal">Фотогалерея</a>
+				</div>
+				<img id="frontphoto" src="{{ STATIC_URL }}images/photogalery.jpg" border="0" onClick="">
+			</div>
+			<div class="vertic fullwidth lside_banner">
+				<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+			<div class="vertic fullwidth tshirtsdiv">
+				<div class="vertic fullwidth">
+					<a href="" class="tshirts">Летайте в медовых футболках</a>
+				</div>
+				<img id="frontphoto" src="{{ STATIC_URL }}images/honeyshirts.jpg" border="0"></a>
+				<button  type="button" onClick="" class="tsorder">
+					Оформить заказ
+				</button>
+			</div>
+		</div>
+
+		<div class="mid_content">
+
+			<div class="vertic fullwidth" style="position:relative;padding-bottom:15px;">
+				<div class="vertic fullwidth clockshop">
+						<div class="vertic clockdiv">
+						<img border="0" src="{{ STATIC_URL }}images/clock white.jpg">
+						<div class="vertic fullwidth cl">
+							<span class="artica">Лондон</a>
+						</div>
+					</div>
+
+					<div class="vertic clockdiv">
+						<img border="0" src="{{ STATIC_URL }}images/clock white.jpg">
+						<div class="vertic fullwidth cl">
+							<span class="artica">Стамбул</a>
+						</div>
+					</div>
+
+					<div class="vertic clockdiv">
+						<img border="0" src="{{ STATIC_URL }}images/clock white.jpg">
+						<div class="vertic fullwidth cl">
+							<span class="artica">Москва</a>
+						</div>
+					</div>
+
+					<div class="vertic clockdiv">
+						<img border="0" src="{{ STATIC_URL }}images/clock white.jpg">
+						<div class="vertic fullwidth cl">
+							<span class="artica">Дубаи</a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="vertic fullwidth nad">
+					<span style="position:absolute;left:0;top:0;">Табло рейсов</span>
+					<span style="margin:0 auto; width:300px;display:block;">В табло указано<span style="color:#EE1F52;">&nbsp;местное время</span></span>
+					<span  style="cursor:pointer;position:absolute;right:0;top:0;" onClick="">Узнать погоду</span>
+				</div>
+
+				<div class="vertic search_back flight_search">
+					<div style="float:left; width:135px;padding:5px 0 5px 5px;">
+						<span class="left">Поиск рейса</span><br>
+						<input id="flight" class="left" type="text" onblur="if(this.value=='') this.value='Номер рейса';" onfocus="this.value='';" value="Номер рейса"></input><br>
+						<span class="left">Откуда</span><br>
+						<input id="flight_from" class="left" type="text" onblur="if(this.value=='') this.value='Город вылета';" onfocus="this.value='';" value="Город вылета"></input><br>
+					</div>
+
+					<div style="float:left;width:135px;padding:5px 5px 5px 15px;">
+						<span class="left">Дата вылета</span><br>
+                        <!-- onblur="if(this.value=='') this.value='дд.мм.гг';" onfocus="this.value='';" value="дд.мм.гг" -->
+						<input id="flight_date" class="right" type="text"/><br>
+						<span class="left">Куда</span><br>
+						<input id="flight_to" class="right" type="text" onblur="if(this.value=='') this.value='Город прилета';" onfocus="this.value='';" value="Город прилета"></input>
+					</div>
+					<button id="show_timetable" class="tableau_button">
+					Показать расписание
+					</button>
+				</div>
+				<div class="right collon search_back flight_search" >
+					<div class="vertic" style="padding:5px 5px 0 5px;">
+					Телефон для справок<br>
+						<div class="whitefon" style="width:282px;">
+							<span class="phonenumber">
+								8(800)123 23 23
+							</span>
+						</div>
+						<div class="left" style="margin:4px 0 0 0;">
+							SMS-сервис<br>
+							<div class="whitefon">
+								4412
+							</div>
+						</div>
+						<div class="right" style="margin:4px 0 0 0;">
+							E-mail-сервис<br>
+							<div class="whitefon">
+								info@vilet.info
+							</div>
+						</div>
+						<button class="tableau_button">
+						Подписаться
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="vertic fullwidth tableau_body">
+				<table id="timetable" class="display">
+                <thead>
+                    <tr>
+                        <th>Рейс</th>
+                        <th>Авиакомпания</th>
+                        <th>Вылет</th>
+                        <th>Прилет</th>
+                        <th>Статус</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+			</div>
+			<div class="vertic fullwidth undertableauinfo">
+				<span>
+					Вы можете получать оперативную информацию о любом рейсе на мобильный телефон
+					или на электронную почту. Для подписки на услугу нажмите знак
+				</span>
+				<img border="0" src="{{ STATIC_URL }}images/smsicon.jpg" style="display:inline;margin:0 5px;"></a>
+				<span>
+					напротив интересующего вас рейса.
+					Если рейс еще не появился в табло, вы можете использовать услугу <a href="" class="artica">предварительной подписки.</a>
+				</span>
+			</div>
+			<div class="vertic fullwidth">
+				<div class="sozdiv">
+					<a href=""><img border="0" class="sozicon" src="{{ STATIC_URL }}images/faceb.jpg"></a>
+				</div>
+				<div class="sozdiv">
+					<a href=""><img border="0" class="sozicon" src="{{ STATIC_URL }}images/twitter.jpg"></a>
+				</div>
+				<div class="sozdiv">
+					<a href=""><img border="0" class="sozicon" src="{{ STATIC_URL }}images/odnoklassniki.jpg"></a>
+				</div>
+				<div class="sozdiv">
+					<a href=""><img border="0" class="sozicon" src="{{ STATIC_URL }}images/vkont.jpg"></a>
+				</div>
+				<div class="sozdiv">
+					<a href=""><img border="0" class="sozicon" src="{{ STATIC_URL }}images/you tube 2.jpg"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="right collon double">
+			<div class="vertic fullwidth opros">
+				<div class="vertic opplash">
+					Ваше мнение важно
+				</div>
+				<div class="cntr op_body">
+					<span class="question">Почему люди не летают как птицы?</span>
+					<img id="frontphoto" src="{{ STATIC_URL }}images/opphoto.jpg">
+					<form method="" class="opform">
+						<div class="vertic fullwidth">
+							<input type="checkbox" name="1" value="on"><div class="vertic oppunkt">Потому что крыльев нету</div>
+						</div>
+						<div class="vertic fullwidth">
+							<input type="checkbox" name="2" value="on"><div class=" vertic oppunkt">Потому что Бог на нас прогневался</div>
+						</div>
+						<div class="vertic fullwidth">
+							<input type="checkbox" name="3" value="on"><div class=" vertic oppunkt">Потому что трава не забористая</div>
+						</div>
+						<div class="vertic fullwidth">
+							<input type="checkbox" name="4" value="on"><div class=" vertic oppunkt">Я летаю</div>
+						</div>
+					<button type="submit"class="vertic opbutton">
+						Голосовать
+					</button>
+					</form>
+					<a class="artica" href="">Результаты голосования</a><br>
+					<a class="artica" href="">Другие опросы</a>
+				</div>
+			</div>
+			<div class="vertic fullwidth rside_banner">
+			<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+			<div class="vertic fullwidth rside_banner">
+			<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+		</div>
+		</div>
+		<div class="vertic big_banner">
+			<div class="vertic fullwidth ban_placeholder"></div>
+		</div>
+
+		<div class="vertic fullwidth" style="margin-left:-15px;width:1000px;">
+			<div class="vertic partbutton">
+				<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+			<div class="vertic partbutton">
+				<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+			<div class="vertic partbutton">
+				<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+			<div class="vertic partbutton">
+				<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+			<div class="vertic partbutton">
+				<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+			<div class="vertic partbutton">
+				<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+			<div class="vertic partbutton">
+				<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+			<div class="vertic partbutton">
+				<div class="vertic fullwidth ban_placeholder"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+	<div class="wrap">
+		<div class="footmenu">
+			<a href="">Главная</a>
+			<a href="">Табло рейсов</a>
+			<a href="">Новости</a>
+			<a href="">Аэропорты</a>
+			<a href="">Авиакомпании</a>
+			<a href="">Заметки бывалых</a>
+			<a href="">Юридическая помощ пассажирам</a>
+			<a href="">Терминологический словарь</a>
+			<a href="">Фотогалерея</a>
+			<a href="">Футболки медового цвета</a>
+			<a href="">Контактная информация</a>
+		</div>
+	</div>
+ </div>
+ </div>
+ </body>
+</html>

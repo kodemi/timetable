@@ -1,16 +1,18 @@
-from django.conf.urls.defaults import * 
+from django.conf.urls.defaults import *
 from django.contrib import admin
-from airports.models import Flight, FlightAdmin
+from django.conf import settings
 
 admin.autodiscover()
-admin.site.register(Flight, FlightAdmin)
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^', 'timetable.views.home', name='home'),
-    # url(r'^timetable/', include('timetable.foo.urls')),
-    (r'^', include('airports.urls')),
-    (r'^api/', include('api.urls')),
-    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    (r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^api/', include('api.urls')),
+    url(r'^', include('cms.urls')),
 )
+
+if settings.DEBUG:
+    urlpatterns = patterns('',
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+        url(r'', include('django.contrib.staticfiles.urls')),
+    ) + urlpatterns
