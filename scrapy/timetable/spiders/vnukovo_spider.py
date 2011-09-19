@@ -48,5 +48,6 @@ class VnukovoSpider(BaseSpider):
             else:
                 item['city_of_arrival'], item['airport_of_arrival'] = u'Москва', u'Внуково'
                 item['city_of_departure'], item['airport_of_departure'] = city_airport_dict['departure']
-            items.append(item)
-        return items
+            #items.append(item)
+            yield item
+        #return items

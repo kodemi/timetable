@@ -22,8 +22,9 @@ class DomodedovoSpider(BaseSpider):
         flights = hxs.select('//table[@id="set"]/tr[position() != last()]')
         for flight in flights:
             item = next(self.parse_main_contents(flight, response, flight_type))
-            items.append(item)
-        return items
+            #items.append(item)
+            yield item
+        #return items
 
     def parse_main_contents(self, flight, response, flight_type):
         loader = TimetableLoader(item=TimetableItem(), selector=flight)
@@ -66,4 +67,4 @@ class DomodedovoSpider(BaseSpider):
         if not airline:
             airline = hxs.select('/html/body/table[1]/tr/td/table[2]/tr[4]/td[2]//text()')
         item['airline'] = airline.extract()[0]
-        yield item
+        return item

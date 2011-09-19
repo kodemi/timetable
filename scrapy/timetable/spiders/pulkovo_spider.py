@@ -48,6 +48,7 @@ class PulkovoSpider(BaseSpider):
             loader.add_value('terminal', response.request.url[-1:].decode('utf-8'))
             loader.add_value('airport', u'LED')
             item = loader.load_item()
-            items.append(item)
-        return items
+            yield item
+            #items.append(item)
+        #return items
         

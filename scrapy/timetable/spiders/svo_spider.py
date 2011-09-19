@@ -22,8 +22,9 @@ class SvoSpider(BaseSpider):
         flights = hxs.select('//div[@class="table"]/table/tbody/tr')
         for flight in flights:
             item = next(self.parse_main_contents(flight, response))
-            items.append(item)
-        return items
+            yield item
+            #items.append(item)
+        #return items
 
     def parse_main_contents(self, flight, response):
         # flight_type: 0 - arrival; 1 - departure
@@ -32,12 +33,15 @@ class SvoSpider(BaseSpider):
         loader = TimetableLoader(item=TimetableItem(), selector=flight)
         loader.add_xpath('flight', 'td[2]//text()')
         loader.add_xpath('airline', 'td[3]//@alt')
+        loader.add_xpath('city_of_departure' if flight_type else 'city_of_arrival', 'td[4]//text()')
         loader.add_xpath('flight_status', 'td[5]//text()')
         loader.add_xpath('datetime_scheduled', 'td[7]//text()')
         loader.add_xpath('datetime_estimated', 'td[8]//text()')
         loader.add_xpath('datetime_actual', 'td[9]//text()')
         loader.add_xpath('terminal', 'td[10]//text()')
         loader.add_value('airport', u'SVO')
+        loader.add_value('city_of_arrival' if flight_type else 'city_of_departure', u'Москва')
+        loader.add_value('airport_of_arrival' if flight_type else 'airport_of_departure', u'Шереметьево')
         item = loader.load_item()
         nowdate = datetime.date(datetime.now())
         item['datetime_scheduled'] = item['datetime_scheduled'].replace(
@@ -50,11 +54,11 @@ class SvoSpider(BaseSpider):
                 month=nowdate.month, day=nowdate.day)
         item['flight_type'] = flight_type
 
-        url = 'http://svo.aero%s' % (flight.select('td[2]//a/@href').extract()[0])
-        request = Request(url, callback = lambda r: self.parse_url_contents(r))
-        request.meta['item'] = item
-        yield request
-
+        #url = 'http://svo.aero%s' % (flight.select('td[2]//a/@href').extract()[0])
+        #request = Request(url, callback = lambda r: self.parse_url_contents(r))
+        #request.meta['item'] = item
+        #yield request
+        yield item
 
     def parse_url_contents(self, response):
         hxs = HtmlXPathSelector(response)
@@ -65,4 +69,4 @@ class SvoSpider(BaseSpider):
         #print departure, re.findall(r'[^\(\)]+', departure, re.U)
         item['city_of_departure'], item['airport_of_departure'] = [x.strip() for x in re.findall(r'[^\(\)]+', departure.strip(), re.U)[:2]]
         item['city_of_arrival'], item['airport_of_arrival'] = [x.strip() for x in re.findall(r'[^\(\)]+', arrival.strip(), re.U)[:2]]
-        yield item
+        return item

@@ -26,9 +26,24 @@ DATABASE_PASSWORD = ''
 
 API_BASE_URL = 'http://localhost:8000/api'
 SELECTORS_BACKEND = 'lxml' 
-LOG_FILE = os.path.join(PROJECT_DIR, 'log.log')
-LOG_LEVEL = 'WARNING'
+#LOG_FILE = os.path.join(PROJECT_DIR, 'log.log')
+#LOG_LEVEL = 'WARNING'
 
 RETRY_ENABLES = True
-RETRY_TIMES = 3
+RETRY_TIMES = 2
+DOWNLOAD_DELAY = 0.5
+DOWNLOAD_TIMEOUT = 10
 
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.contrib.downloadermiddleware.robotstxt.RobotsTxtMiddleware': None,
+    'scrapy.contrib.downloadermiddleware.httpauth.HttpAuthMiddleware': None,
+    'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
+    'scrapy.contrib.downloadermiddleware.redirect.RedirectMiddleware': None,
+    'scrapy.contrib.downloadermiddleware.cookies.CookiesMiddleware': None,
+    'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': None,
+    'scrapy.contrib.downloadermiddleware.httpcompression.HttpCompressionMiddleware': None,
+    'scrapy.contrib.downloadermiddleware.httpcache.HttpCacheMiddleware': None,
+}
+
+TELNETCONSOLE_ENABLED = False
+WEBSERVICE_ENABLED = False
