@@ -12,7 +12,7 @@ class VnukovoSpider(BaseSpider):
         "http://vnukovo.ru/rus/for-passengers/board/index.wbp?time-table.direction=0",
         "http://vnukovo.ru/rus/for-passengers/board/index.wbp?time-table.direction=1",
     ]
-
+    
     def parse(self, response):
         hxs = HtmlXPathSelector(response)
         # flight_type: 0 - arrival; 1 - departure

@@ -1,6 +1,7 @@
 #-*- coding: utf-8 -*-
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
+from scrapy import log
 from scrapy.http import Request
 from timetable.items import TimetableItem
 from timetable.itemloaders import TimetableLoader
@@ -46,19 +47,19 @@ class SvoSpider(BaseSpider):
         nowdate = datetime.date(datetime.now())
         item['datetime_scheduled'] = item['datetime_scheduled'].replace(
                 month=nowdate.month, day=nowdate.day)
-        if item['datetime_estimated']:
+        if item.get('datetime_estimated'):
             item['datetime_estimated'] = item['datetime_estimated'].replace(
                 month=nowdate.month, day=nowdate.day)
-        if item['datetime_actual']:
+        if item.get('datetime_actual'):
             item['datetime_actual'] = item['datetime_actual'].replace(
                 month=nowdate.month, day=nowdate.day)
         item['flight_type'] = flight_type
 
-        #url = 'http://svo.aero%s' % (flight.select('td[2]//a/@href').extract()[0])
-        #request = Request(url, callback = lambda r: self.parse_url_contents(r))
-        #request.meta['item'] = item
-        #yield request
-        yield item
+        url = 'http://svo.aero%s' % (flight.select('td[2]//a/@href').extract()[0])
+        request = Request(url, callback = lambda r: self.parse_url_contents(r))
+        request.meta['item'] = item
+        yield request
+        #yield item
 
     def parse_url_contents(self, response):
         hxs = HtmlXPathSelector(response)

@@ -13,7 +13,7 @@ class DomodedovoSpider(BaseSpider):
         "http://www.domodedovo.ru/ru/main/airindicator/arrivalnew/",
         "http://www.domodedovo.ru/ru/main/airindicator/flightnew/",
     ]
-
+   
     def parse(self, response):
         hxs = HtmlXPathSelector(response)
         # flight_type: 0 - arrival; 1 - departure

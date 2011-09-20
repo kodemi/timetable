@@ -93,6 +93,7 @@ class RestPipeline(object):
     def __init__(self):
         base_url = settings.get('API_BASE_URL')
         self.conn = Connection(base_url)
+        self.output = open('items', 'w')
 
     def process_item(self, item, spider):
         data = dict((key, u'') for key in item.fields)
@@ -106,8 +107,9 @@ class RestPipeline(object):
             else:
                 data[k] = item[k].encode('utf-8')
         data = json.dumps(data)
-        resp = self.conn.request_post("/flights", args={'data': data})
-        if resp['headers']['status'] != '200':
-            log.msg('Response: %s\nJsonData: %s\nItemData: %s\n' % (resp, data, item), level=log.ERROR)
+        self.output.write("%s\n" % data)
+        #resp = self.conn.request_post("/flights", args={'data': data})
+        #if resp['headers']['status'] != '200':
+        #    log.msg('Response: %s\nJsonData: %s\nItemData: %s\n' % (resp, data, item), level=log.ERROR)
         return item
 
